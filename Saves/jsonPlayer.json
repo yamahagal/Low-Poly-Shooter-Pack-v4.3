@@ -1,0 +1,381 @@
+{
+  "weapons": [
+    {
+      "weaponName": "Вихрь",
+      "hasPlayerWeapon": true,
+      "skins": [
+        {
+          "skinName": "Camo_01",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_02",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_03",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_04",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_05",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_06",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10000,
+          "selected": false
+        },
+        {
+          "skinName": "Basic_01",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 0,
+          "selected": true
+        }
+      ],
+      "currentSkinIndex": 6,
+      "cost": 1000
+    },
+    {
+      "weaponName": "Штурм",
+      "hasPlayerWeapon": true,
+      "skins": [
+        {
+          "skinName": "Camo_01",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_02",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_03",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 1000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_04",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_05",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_06",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 1,
+          "selected": true
+        },
+        {
+          "skinName": "Basic_01",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 0,
+          "selected": false
+        }
+      ],
+      "currentSkinIndex": 5,
+      "cost": 10000
+    },
+    {
+      "weaponName": "Шквал",
+      "hasPlayerWeapon": false,
+      "skins": [
+        {
+          "skinName": "Camo_01",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_02",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100,
+          "selected": true
+        },
+        {
+          "skinName": "Camo_03",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_04",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_05",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_06",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1,
+          "selected": false
+        },
+        {
+          "skinName": "Basic_01",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 0,
+          "selected": false
+        }
+      ],
+      "currentSkinIndex": 1,
+      "cost": 10000
+    },
+    {
+      "weaponName": "Буревестник",
+      "hasPlayerWeapon": false,
+      "skins": [
+        {
+          "skinName": "Camo_01",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_02",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_03",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_04",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 12200,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_05",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10001,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_06",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 990,
+          "selected": false
+        },
+        {
+          "skinName": "Basic_01",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 0,
+          "selected": true
+        }
+      ],
+      "currentSkinIndex": 2,
+      "cost": 100
+    },
+    {
+      "weaponName": "Скорпион",
+      "hasPlayerWeapon": true,
+      "skins": [
+        {
+          "skinName": "Camo_01",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 10,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_02",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_03",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_04",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 10000,
+          "selected": true
+        },
+        {
+          "skinName": "Camo_05",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 100000,
+          "selected": false
+        },
+        {
+          "skinName": "Camo_06",
+          "hasPlayerSkin": false,
+          "skinMaterialIndex": 0,
+          "cost": 1,
+          "selected": false
+        },
+        {
+          "skinName": "Basic_01",
+          "hasPlayerSkin": true,
+          "skinMaterialIndex": 0,
+          "cost": 0,
+          "selected": false
+        }
+      ],
+      "currentSkinIndex": 3,
+      "cost": 100
+    },
+    {
+      "weaponName": "Искра",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Призрак",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Вектор",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Гром",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Разрыватель",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Ураган",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Гроза",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Рысь",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Лавина",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Атака",
+      "hasPlayerWeapon": true,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Сокол",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Волна",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    },
+    {
+      "weaponName": "Тень",
+      "hasPlayerWeapon": false,
+      "skins": [],
+      "currentSkinIndex": 0,
+      "cost": 100
+    }
+  ],
+  "money": 8819963
+}
