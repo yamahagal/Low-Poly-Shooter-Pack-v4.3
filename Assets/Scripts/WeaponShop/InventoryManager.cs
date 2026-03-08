@@ -575,11 +575,42 @@ namespace WeaponShop
                 Debug.Log($"Обновляем инвентарь и экипируем индекс {selectedWeaponIndex}. Осталось {remainingWeapons.Length} оружий.");
             }
              
-            // Обновляем анимацию оружия, вызывая RefreshWeaponSetup из Character
+            // Получаем компонент Character для обновления анимации
             var character = playerInventory.GetComponent<InfimaGames.LowPolyShooterPack.Character>();
             if (character != null)
             {
                 var characterType = character.GetType();
+                
+                // Вызываем SetHolstered(false) для корректного состояния аниматора
+                var setHolsteredMethod = characterType.GetMethod("SetHolstered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                if (setHolsteredMethod != null)
+                {
+                    setHolsteredMethod.Invoke(character, System.Reflection.BindingFlags.InvokeMethod, null, new object[] { false }, System.Globalization.CultureInfo.CurrentCulture);
+                    Debug.Log("Вызван SetHolstered(false).");
+                }
+                
+                // Получаем аниматор персонажа через рефлексию
+                var characterAnimatorField = characterType.GetField("characterAnimator", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                if (characterAnimatorField != null)
+                {
+                    var characterAnimator = characterAnimatorField.GetValue(character) as Animator;
+                    if (characterAnimator != null)
+                    {
+                        // Получаем индекс слоя holster через рефлексию
+                        var layerHolsterField = characterType.GetField("layerHolster", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                        int layerHolster = 0;
+                        if (layerHolsterField != null)
+                        {
+                            layerHolster = (int)layerHolsterField.GetValue(character);
+                        }
+                        
+                        // Играем анимацию Unholster
+                        characterAnimator.Play("Unholster", layerHolster, 0);
+                        Debug.Log($"Сыграна анимация Unholster на слое {layerHolster}.");
+                    }
+                }
+                
+                // Вызываем RefreshWeaponSetup для обновления контроллера анимации
                 var refreshWeaponSetupMethod = characterType.GetMethod("RefreshWeaponSetup", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 if (refreshWeaponSetupMethod != null)
                 {
