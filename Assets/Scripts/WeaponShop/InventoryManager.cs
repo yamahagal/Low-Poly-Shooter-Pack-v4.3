@@ -24,7 +24,7 @@ namespace WeaponShop
 
         [Tooltip("Задержка перед удалением оружий (в секундах).")]
         [SerializeField]
-        private float weaponRemovalDelay = 0.5f;
+        private float weaponRemovalDelay = 0f;
 
         private InventoryData inventoryData;
         private bool weaponsProcessed = false;
