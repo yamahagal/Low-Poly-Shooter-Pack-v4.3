@@ -574,6 +574,27 @@ namespace WeaponShop
                 refreshMethod.Invoke(playerInventory, System.Reflection.BindingFlags.InvokeMethod, null, new object[] { selectedWeaponIndex }, System.Globalization.CultureInfo.CurrentCulture);
                 Debug.Log($"Обновляем инвентарь и экипируем индекс {selectedWeaponIndex}. Осталось {remainingWeapons.Length} оружий.");
             }
+             
+            // Обновляем анимацию оружия, вызывая RefreshWeaponSetup из Character
+            var character = playerInventory.GetComponent<InfimaGames.LowPolyShooterPack.Character>();
+            if (character != null)
+            {
+                var characterType = character.GetType();
+                var refreshWeaponSetupMethod = characterType.GetMethod("RefreshWeaponSetup", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                if (refreshWeaponSetupMethod != null)
+                {
+                    refreshWeaponSetupMethod.Invoke(character, System.Reflection.BindingFlags.InvokeMethod, null, null, System.Globalization.CultureInfo.CurrentCulture);
+                    Debug.Log("Обновлена анимация оружия через RefreshWeaponSetup.");
+                }
+                else
+                {
+                    Debug.LogWarning("Метод RefreshWeaponSetup не найден в Character.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Компонент Character не найден на объекте с Inventory.");
+            }
         }
 
         #endregion
