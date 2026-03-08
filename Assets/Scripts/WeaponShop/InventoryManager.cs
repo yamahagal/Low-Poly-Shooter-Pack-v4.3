@@ -365,9 +365,28 @@ namespace WeaponShop
 
             Debug.Log($"Загружено оружий в JSON: {inventoryData.weapons.Count}");
 
-            // Ищем все WeaponBehaviour в сцене
-            var allWeapons = FindObjectsOfType<InfimaGames.LowPolyShooterPack.WeaponBehaviour>();
-            Debug.Log($"Найдено WeaponBehaviour в сцене: {allWeapons.Length}");
+            // Находим инвентарь игрока и получаем все оружия (включая неактивные)
+            var playerInventory = FindObjectOfType<InfimaGames.LowPolyShooterPack.Inventory>();
+            if (playerInventory == null)
+            {
+                Debug.LogWarning("Компонент Inventory не найден на игроке.");
+                return;
+            }
+
+            // Получаем экипированное оружие через рефлексию
+            var inventoryType = playerInventory.GetType();
+            var equippedField = inventoryType.GetField("equipped", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            InfimaGames.LowPolyShooterPack.WeaponBehaviour equippedWeapon = null;
+            if (equippedField != null)
+            {
+                equippedWeapon = equippedField.GetValue(playerInventory) as InfimaGames.LowPolyShooterPack.WeaponBehaviour;
+                if (equippedWeapon != null)
+                    Debug.Log($"Экипированное оружие: {equippedWeapon.name}");
+            }
+
+            // Получаем все дочерние WeaponBehaviour из инвентаря игрока (включая неактивные)
+            var allWeapons = playerInventory.GetComponentsInChildren<InfimaGames.LowPolyShooterPack.WeaponBehaviour>(true);
+            Debug.Log($"Найдено WeaponBehaviour в инвентаре игрока: {allWeapons.Length}");
             
             int removedCount = 0;
             int checkedCount = 0;
@@ -388,17 +407,38 @@ namespace WeaponShop
                     Debug.Log($"  >>> Помечаем для удаления: {weaponName}");
                     weaponsToDestroy.Add(weapon.gameObject);
                     removedCount++;
+                    
+                    // Проверяем, будет ли удалено экипированное оружие
+                    if (equippedWeapon != null && weapon == equippedWeapon)
+                    {
+                        Debug.Log($"  >>> Экипированное оружие будет удалено! Деактивируем его модель.");
+                        // Деактивируем модель оружия, чтобы убрать её из рук игрока
+                        weapon.gameObject.SetActive(false);
+                    }
                 }
             }
 
             Debug.Log($"=== Проверено {checkedCount} оружий, помечено для удаления {removedCount} ===");
             weaponsProcessed = true;
-            
-            // Сначала обновляем инвентарь, чтобы убрать ссылки на удаляемые оружия
-            RefreshInventoryWeapons();
-            
-            // Затем уничтожаем GameObjects (в следующем кадре, после обновления инвентаря)
+             
+            // Сначала уничтожаем GameObjects (в следующем кадре)
             StartCoroutine(DestroyWeaponsNextFrame(weaponsToDestroy));
+             
+            // Затем обновляем инвентарь после удаления (задержка чтобы удаления успели выполниться)
+            StartCoroutine(RefreshInventoryAfterDestroy());
+        }
+
+        /// <summary>
+        /// Обновляет инвентарь после удаления оружий с задержкой.
+        /// </summary>
+        private System.Collections.IEnumerator RefreshInventoryAfterDestroy()
+        {
+            // Ждем 3 кадра чтобы удаления успели выполниться
+            yield return null;
+            yield return null;
+            yield return null;
+            
+            RefreshInventoryWeapons();
         }
 
         /// <summary>
@@ -436,7 +476,8 @@ namespace WeaponShop
             {
                 Debug.Log($"      Проверяем: weaponId='{kvp.Value.weaponId}', selected={kvp.Value.selected}");
                 
-                if (kvp.Value.weaponId == weaponName || weaponName.Contains(kvp.Value.weaponId))
+                // Нечувствительная к регистру проверка - имена в сцене имеют префикс P_LPSP_WEP_ и заглавные буквы
+                if (weaponName.IndexOf(kvp.Value.weaponId, System.StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     Debug.Log($"      ✓ Совпадение найдено! Возвращаем {kvp.Value.selected}");
                     return kvp.Value.selected;
@@ -453,20 +494,85 @@ namespace WeaponShop
         private void RefreshInventoryWeapons()
         {
             var playerInventory = FindObjectOfType<InfimaGames.LowPolyShooterPack.Inventory>();
-             
+              
             if (playerInventory == null)
             {
                 Debug.LogWarning("Компонент Inventory не найден на игроке.");
                 return;
             }
 
+            // Получаем тип инвентаря для рефлексии
             var inventoryType = playerInventory.GetType();
-            var initMethod = inventoryType.GetMethod("Init", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+
+            // Проверяем, есть ли ещё оружия в инвентаре
+            var remainingWeapons = playerInventory.GetComponentsInChildren<InfimaGames.LowPolyShooterPack.WeaponBehaviour>(true);
              
-            if (initMethod != null)
+            if (remainingWeapons == null || remainingWeapons.Length == 0)
             {
-                initMethod.Invoke(playerInventory, new object[] { 0 });
-                Debug.Log("Инвентарь обновлен после удаления невыбранных оружий.");
+                Debug.LogWarning("В инвентаре нет оружий. Игрок остаётся без оружия.");
+                // Сбрасываем состояние инвентаря через рефлексию
+                var equippedField = inventoryType.GetField("equipped", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                var equippedIndexField = inventoryType.GetField("equippedIndex", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                
+                if (equippedField != null)
+                    equippedField.SetValue(playerInventory, null);
+                if (equippedIndexField != null)
+                    equippedIndexField.SetValue(playerInventory, -1);
+                    
+                return;
+            }
+
+            // Находим индекс выбранного оружия в JSON
+            int selectedWeaponIndex = 0;
+            string selectedWeaponId = inventoryData?.currentWeaponId;
+            
+            if (!string.IsNullOrEmpty(selectedWeaponId))
+            {
+                // Ищем оружие с selected: true
+                foreach (var kvp in inventoryData.weapons)
+                {
+                    if (kvp.Value.selected)
+                    {
+                        selectedWeaponId = kvp.Value.weaponId;
+                        break;
+                    }
+                }
+            }
+            
+            // Находим индекс выбранного оружия среди оставшихся оружий
+            if (!string.IsNullOrEmpty(selectedWeaponId))
+            {
+                Debug.LogWarning("Выбранное оружие не найдено, используем первое оружие.");
+                selectedWeaponIndex = 0;
+            }
+            else
+            {
+                // Ищем индекс выбранного оружия
+                for (int i = 0; i < remainingWeapons.Length; i++)
+                {
+                    string weaponName = remainingWeapons[i].name;
+                    if (weaponName.IndexOf(selectedWeaponId, System.StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        selectedWeaponIndex = i;
+                        Debug.Log($"Найден выбранный индекс: {selectedWeaponIndex} для оружия: {selectedWeaponId}");
+                        break;
+                    }
+                }
+            }
+            
+            // Если выбранное оружие не найдено среди оставшихся, используем первое
+            if (selectedWeaponIndex >= remainingWeapons.Length)
+            {
+                Debug.LogWarning($"Выбранное оружие {selectedWeaponId} не найдено в инвентаре, используем первое оружие.");
+                selectedWeaponIndex = 0;
+            }
+             
+            // Принудительно вызываем ForceRefreshInventory() для обновления инвентаря и экипирования выбранного оружия
+            var refreshMethod = inventoryType.GetMethod("ForceRefreshInventory", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+            if (refreshMethod != null)
+            {
+                refreshMethod.Invoke(playerInventory, System.Reflection.BindingFlags.InvokeMethod, null, new object[] { selectedWeaponIndex }, System.Globalization.CultureInfo.CurrentCulture);
+                Debug.Log($"Обновляем инвентарь и экипируем индекс {selectedWeaponIndex}. Осталось {remainingWeapons.Length} оружий.");
             }
         }
 

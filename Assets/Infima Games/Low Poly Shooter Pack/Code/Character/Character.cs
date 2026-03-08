@@ -299,7 +299,7 @@ namespace InfimaGames.LowPolyShooterPack
 			movementBehaviour = GetComponent<MovementBehaviour>();
 
 			//Initialize Inventory.
-			inventory.Init(weaponIndexEquippedAtStart);
+			//inventory.Init(weaponIndexEquippedAtStart); // Убран автоматический вызов Init - теперь вызывается из InventoryManager
 
 			//Refresh!
 			RefreshWeaponSetup();
