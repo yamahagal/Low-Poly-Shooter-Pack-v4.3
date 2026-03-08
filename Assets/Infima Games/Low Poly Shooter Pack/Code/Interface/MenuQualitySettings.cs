@@ -2,7 +2,8 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Rendering.PostProcessing;
+// Post Processing Stack v1 несовместим с HDRP. Для HDRP требуется UnityEngine.Rendering.HighDefinition
+// using UnityEngine.Rendering.PostProcessing;
 
 namespace InfimaGames.LowPolyShooterPack.Interface
 {
@@ -40,19 +41,10 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         /// </summary>
         private bool menuIsEnabled;
 
-        /// <summary>
-        /// Main Post Processing Volume.
-        /// </summary>
-        private PostProcessVolume postProcessingVolume;
-        /// <summary>
-        /// Scope Post Processing Volume.
-        /// </summary>
-        private PostProcessVolume postProcessingVolumeScope;
-
-        /// <summary>
-        /// Depth Of Field Settings.
-        /// </summary>
-        private DepthOfField depthOfField;
+        // Post Processing отключен из-за несовместимости с HDRP
+        // private PostProcessVolume postProcessingVolume;
+        // private PostProcessVolume postProcessingVolumeScope;
+        // private DepthOfField depthOfField;
 
         #endregion
 
@@ -65,18 +57,16 @@ namespace InfimaGames.LowPolyShooterPack.Interface
             //Get canvas animation component.
             animationComponent = animatedCanvas.GetComponent<Animation>();
 
-            //Find post process volumes in scene and assign them.
-            postProcessingVolume = GameObject.Find("Post Processing Volume")?.GetComponent<PostProcessVolume>();
-            postProcessingVolumeScope = GameObject.Find("Post Processing Volume Scope")?.GetComponent<PostProcessVolume>();
-            
-            //Get depth of field setting from main post process volume.
-            if(postProcessingVolume != null)
-                postProcessingVolume.profile.TryGetSettings(out depthOfField);
+            // Post Processing отключен из-за несовместимости с HDRP
+            // postProcessingVolume = GameObject.Find("Post Processing Volume")?.GetComponent<PostProcessVolume>();
+            // postProcessingVolumeScope = GameObject.Find("Post Processing Volume Scope")?.GetComponent<PostProcessVolume>();
+            // if(postProcessingVolume != null)
+            //     postProcessingVolume.profile.TryGetSettings(out depthOfField);
         }
 
         protected override void Tick()
         {
-            //Switch. Fades in or out the menu based on the cursor's state.
+            //Switch. Fades in or out menu based on cursor's state.
             bool cursorLocked = characterBehaviour.IsCursorLocked();
             switch (cursorLocked)
             {
@@ -96,7 +86,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         #region METHODS
 
         /// <summary>
-        /// Shows the menu by playing an animation.
+        /// Shows menu by playing an animation.
         /// </summary>
         private void Show()
         {
@@ -107,12 +97,12 @@ namespace InfimaGames.LowPolyShooterPack.Interface
             animationComponent.clip = animationShow;
             animationComponent.Play();
 
-            //Enable depth of field effect.
-            if(depthOfField != null)
-                depthOfField.active = true;
+            // Post Processing отключен из-за несовместимости с HDRP
+            // if(depthOfField != null)
+            //     depthOfField.active = true;
         }
         /// <summary>
-        /// Hides the menu by playing an animation.
+        /// Hides menu by playing an animation.
         /// </summary>
         private void Hide()
         {
@@ -123,25 +113,25 @@ namespace InfimaGames.LowPolyShooterPack.Interface
             animationComponent.clip = animationHide;
             animationComponent.Play();
 
-            //Disable depth of field effect.
-            if(depthOfField != null)
-                depthOfField.active = false;
+            // Post Processing отключен из-за несовместимости с HDRP
+            // if(depthOfField != null)
+            //     depthOfField.active = false;
         }
 
         /// <summary>
-        /// Sets whether the post processing is enabled, or disabled.
+        /// Sets whether post processing is enabled, or disabled.
         /// </summary>
         private void SetPostProcessingState(bool value = true)
         {
-            //Enable/Disable the volumes.
-            if(postProcessingVolume != null)
-                postProcessingVolume.enabled = value;
-            if(postProcessingVolumeScope != null)
-                postProcessingVolumeScope.enabled = value;
+            // Post Processing отключен из-за несовместимости с HDRP
+            // if(postProcessingVolume != null)
+            //     postProcessingVolume.enabled = value;
+            // if(postProcessingVolumeScope != null)
+            //     postProcessingVolumeScope.enabled = value;
         }
 
         /// <summary>
-        /// Sets the graphic quality to very low.
+        /// Sets graphic quality to very low.
         /// </summary>
         public void SetQualityVeryLow()
         {
@@ -151,7 +141,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
             SetPostProcessingState(false);
         }
         /// <summary>
-        /// Sets the graphic quality to low.
+        /// Sets graphic quality to low.
         /// </summary>
         public void SetQualityLow()
         {
@@ -162,7 +152,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         }
 
         /// <summary>
-        /// Sets the graphic quality to medium.
+        /// Sets graphic quality to medium.
         /// </summary>
         public void SetQualityMedium()
         {
@@ -172,7 +162,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
             SetPostProcessingState();
         }
         /// <summary>
-        /// Sets the graphic quality to high.
+        /// Sets graphic quality to high.
         /// </summary>
         public void SetQualityHigh()
         {
@@ -183,7 +173,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         }
 
         /// <summary>
-        /// Sets the graphic quality to very high.
+        /// Sets graphic quality to very high.
         /// </summary>
         public void SetQualityVeryHigh()
         {
@@ -193,7 +183,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
             SetPostProcessingState();
         }
         /// <summary>
-        /// Sets the graphic quality to ultra.
+        /// Sets graphic quality to ultra.
         /// </summary>
         public void SetQualityUltra()
         {
@@ -207,12 +197,12 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         {
             //Path.
             string sceneToLoad = SceneManager.GetActiveScene().path;
-            
+             
             #if UNITY_EDITOR
-            //Load the scene.
+            //Load scene.
             UnityEditor.SceneManagement.EditorSceneManager.LoadSceneAsyncInPlayMode(sceneToLoad, new LoadSceneParameters(LoadSceneMode.Single));
             #else
-            //Load the scene.
+            //Load scene.
             SceneManager.LoadSceneAsync(sceneToLoad, new LoadSceneParameters(LoadSceneMode.Single));
             #endif
         }

@@ -3,7 +3,6 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static SaveSystem;
 
 namespace InfimaGames.LowPolyShooterPack
 {
@@ -27,7 +26,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         private int equippedIndex = -1;
 
-        public PlayerData data;
+        public SaveSystem.PlayerData data;
         public Material[] materials;
 
         #endregion
@@ -35,7 +34,8 @@ namespace InfimaGames.LowPolyShooterPack
         #region METHODS
 
         public void Awake() {
-            data = new SaveSystem().Load("C:\\Unity\\Low Poly Shooter Pack v4.3\\Saves");
+            var saveSystem = new SaveSystem();
+            data = saveSystem.Load("C:\\Unity\\Low Poly Shooter Pack v4.3\\Saves");
         }
 
         public override void Init(int equippedAtStart = 0)
