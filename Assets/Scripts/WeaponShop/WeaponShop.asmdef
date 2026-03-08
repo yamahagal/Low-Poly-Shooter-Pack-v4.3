@@ -1,0 +1,17 @@
+{
+    "name": "WeaponShop",
+    "references": [
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "UnityEngine.UIElements",
+        "InfimaGames.LowPolyShooterPack"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "noEngineReferences": false
+}
