@@ -576,7 +576,7 @@ namespace WeaponShop
             }
              
             // Получаем компонент Character для обновления анимации
-            var character = playerInventory.GetComponent<InfimaGames.LowPolyShooterPack.Character>();
+            var character = FindObjectOfType<InfimaGames.LowPolyShooterPack.Character>();
             if (character != null)
             {
                 var characterType = character.GetType();
