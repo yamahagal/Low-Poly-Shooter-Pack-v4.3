@@ -34,7 +34,13 @@ namespace InfimaGames.LowPolyShooterPack
         #region METHODS
 
         public void Awake() {
-            var saveSystem = new SaveSystem();
+            // Ищем SaveSystem в сцене, так как он может быть в другом namespace
+            var saveSystem = FindObjectOfType<SaveSystem>();
+            if (saveSystem == null)
+            {
+                Debug.LogError("SaveSystem не найден в сцене!");
+                return;
+            }
             data = saveSystem.Load("C:\\Unity\\Low Poly Shooter Pack v4.3\\Saves");
         }
 
