@@ -1,6 +1,9 @@
 ﻿//Copyright 2022, Infima Games. All Rights Reserved.
 
+using System;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,9 +14,15 @@ namespace InfimaGames.LowPolyShooterPack
         #region FIELDS
 
         /// <summary>
+        /// Путь к файлу инвентаря.
+        /// </summary>
+        [SerializeField]
+        private string inventoryFilePath = "saves/inventory_test.json";
+
+        /// <summary>
         /// Array of all weapons. These are gotten in the order that they are parented to this object.
         /// </summary>
-        [SerializeField]        
+        [SerializeField]
         private WeaponBehaviour[] weapons;
 
         /// <summary>
@@ -32,35 +41,69 @@ namespace InfimaGames.LowPolyShooterPack
 
 
         public override void Init(int equippedAtStart = 0) {
-            // bool destroy = true;
-            // Weapon[] _weap = GetComponentsInChildren<Weapon>(true);
-            // foreach (Weapon w in _weap) {
-            //     destroy = true;
-            //     foreach (WeaponShopSettings WSS in data.weapons) {
-            //         if (WSS.weaponName == w.weaponName) {
-            //             if (WSS.hasPlayerWeapon) {
-            //                 destroy = false;
-            //                 w.gameObject.SetActive(true);
-            //             }
-            //         }
-            //     }
-            //     if (destroy) {
-            //         Destroy(w.gameObject);
-            //     }
-            // }
+            RemoveUnselectedWeaponsFromJson();
 
             //Cache all weapons. Beware that weapons need to be parented to the object this component is on!
             weapons = GetComponentsInChildren<WeaponBehaviour>();
 
             //Disable all weapons. This makes it easier for us to only activate the one we need.
             foreach (WeaponBehaviour weapon in weapons) {
-                
                 weapon.gameObject.SetActive(false);
             }
                 
 
             //Equip.
             Equip(equippedAtStart);
+        }
+
+        /// <summary>
+        /// Удаляет невыбранные оружия из JSON-файла инвентаря.
+        /// </summary>
+        public void RemoveUnselectedWeaponsFromJson()
+        {
+            string fullPath = Path.Combine(Application.persistentDataPath, inventoryFilePath);
+            
+            if (!File.Exists(fullPath))
+            {
+                Debug.LogWarning($"Файл инвентаря не найден: {fullPath}");
+                return;
+            }
+
+            try
+            {
+                string json = File.ReadAllText(fullPath);
+                var data = JsonConvert.DeserializeObject<InventoryData>(json);
+                
+                if (data == null || data.weapons == null)
+                {
+                    Debug.LogWarning("Данные инвентаря пусты.");
+                    return;
+                }
+
+                var weaponsToRemove = new List<string>();
+                
+                foreach (var kvp in data.weapons)
+                {
+                    if (!kvp.Value.selected)
+                    {
+                        weaponsToRemove.Add(kvp.Key);
+                    }
+                }
+
+                foreach (var weaponId in weaponsToRemove)
+                {
+                    data.weapons.Remove(weaponId);
+                }
+
+                string updatedJson = JsonConvert.SerializeObject(data, Formatting.Indented);
+                File.WriteAllText(fullPath, updatedJson);
+                
+                Debug.Log($"Удалено {weaponsToRemove.Count} невыбранных оружий из JSON-файла.");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Ошибка при удалении невыбранных оружий: {e.Message}");
+            }
         }
 
         public override WeaponBehaviour Equip(int index)

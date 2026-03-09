@@ -30,7 +30,7 @@
     "smg_01": {
       "weaponId": "smg_01",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "smg_02": {

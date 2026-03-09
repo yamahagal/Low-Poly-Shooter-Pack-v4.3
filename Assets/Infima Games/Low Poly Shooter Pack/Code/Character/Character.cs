@@ -299,7 +299,7 @@ namespace InfimaGames.LowPolyShooterPack
 			movementBehaviour = GetComponent<MovementBehaviour>();
 
 			//Initialize Inventory.
-			//inventory.Init(weaponIndexEquippedAtStart); // Убран автоматический вызов Init - теперь вызывается из InventoryManager
+			inventory.Init(weaponIndexEquippedAtStart); // Убран автоматический вызов Init - теперь вызывается из InventoryManager
 
 			//Refresh!
 			RefreshWeaponSetup();
@@ -379,10 +379,14 @@ namespace InfimaGames.LowPolyShooterPack
 			//Running Field Of View Multiplier.
 			float runningFieldOfView = Mathf.Lerp(1.0f, fieldOfViewRunningMultiplier, runningAlpha);
 			
-			//Interpolate the world camera's field of view based on whether we are aiming or not.
-			cameraWorld.fieldOfView = Mathf.Lerp(fieldOfView, fieldOfView * equippedWeapon.GetFieldOfViewMultiplierAim(), aimingAlpha) * runningFieldOfView;
-			//Interpolate the depth camera's field of view based on whether we are aiming or not.
-			cameraDepth.fieldOfView = Mathf.Lerp(fieldOfViewWeapon, fieldOfViewWeapon * equippedWeapon.GetFieldOfViewMultiplierAimWeapon(), aimingAlpha);
+			//Make sure we have an equipped weapon before accessing it.
+			if (equippedWeapon != null)
+			{
+				//Interpolate the world camera's field of view based on whether we are aiming or not.
+				cameraWorld.fieldOfView = Mathf.Lerp(fieldOfView, fieldOfView * equippedWeapon.GetFieldOfViewMultiplierAim(), aimingAlpha) * runningFieldOfView;
+				//Interpolate the depth camera's field of view based on whether we are aiming or not.
+				cameraDepth.fieldOfView = Mathf.Lerp(fieldOfViewWeapon, fieldOfViewWeapon * equippedWeapon.GetFieldOfViewMultiplierAimWeapon(), aimingAlpha);
+			}
 			
 			//Save Aiming Value.
 			wasAiming = aiming;
@@ -674,7 +678,7 @@ namespace InfimaGames.LowPolyShooterPack
 		/// <summary>
 		/// Refresh all weapon things to make sure we're all set up!
 		/// </summary>
-		private void RefreshWeaponSetup()
+		public void RefreshWeaponSetup()
 		{
 			//Make sure we have a weapon. We don't want errors!
 			if ((equippedWeapon = inventory.GetEquipped()) == null)

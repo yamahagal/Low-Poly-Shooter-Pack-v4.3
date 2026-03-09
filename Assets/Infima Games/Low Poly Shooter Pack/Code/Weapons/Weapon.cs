@@ -303,12 +303,12 @@ namespace InfimaGames.LowPolyShooterPack
         public override float GetFieldOfViewMultiplierAim()
         {
             //Make sure we don't have any issues even with a broken setup!
-            if (scopeBehaviour != null) 
+            if (scopeBehaviour != null)
                 return scopeBehaviour.GetFieldOfViewMultiplierAim();
-            
-            //Error.
-            Debug.LogError("Weapon has no scope equipped!");
-  
+             
+            //Warning - this is not a critical error, just a missing optional attachment.
+            Debug.LogWarning("Weapon has no scope equipped!");
+   
             //Return.
             return 1.0f;
         }
@@ -318,12 +318,12 @@ namespace InfimaGames.LowPolyShooterPack
         public override float GetFieldOfViewMultiplierAimWeapon()
         {
             //Make sure we don't have any issues even with a broken setup!
-            if (scopeBehaviour != null) 
+            if (scopeBehaviour != null)
                 return scopeBehaviour.GetFieldOfViewMultiplierAimWeapon();
-            
-            //Error.
-            Debug.LogError("Weapon has no scope equipped!");
-  
+             
+            //Warning - this is not a critical error, just a missing optional attachment.
+            Debug.LogWarning("Weapon has no scope equipped!");
+   
             //Return.
             return 1.0f;
         }

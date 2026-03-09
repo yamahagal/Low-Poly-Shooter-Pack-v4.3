@@ -45,14 +45,7 @@ namespace WeaponShop
         private void Awake()
         {
             LoadInventory();
-        }
-
-        private void Start()
-        {
-            if (removeUnselectedWeapons && !weaponsProcessed)
-            {
-                StartCoroutine(RemoveUnselectedWeaponsDelayed());
-            }
+            RemoveUnselectedWeapons();
         }
 
         private void OnApplicationPause(bool pauseStatus)
@@ -230,6 +223,7 @@ namespace WeaponShop
 
         #endregion
 
+
         #region PRIVATE METHODS
 
         /// <summary>
@@ -258,7 +252,6 @@ namespace WeaponShop
                     }
                      
                     int weaponCount = inventoryData.weapons != null ? inventoryData.weapons.Count : 0;
-                    Debug.Log($"✓ Инвентарь загружен из Assets. Оружий: {weaponCount}, Текущее: {inventoryData.currentWeaponId}");
                     return;
                 }
                 catch (Exception e)
@@ -269,13 +262,6 @@ namespace WeaponShop
 
             // Пробуем загрузить из persistentDataPath
             string fullPath = Path.Combine(Application.persistentDataPath, inventoryFilePath);
-            
-            if (!File.Exists(fullPath))
-            {
-                CreateDefaultInventory();
-                Debug.Log("Файл инвентаря не найден в persistentDataPath. Создан новый.");
-                return;
-            }
 
             try
             {
@@ -293,12 +279,10 @@ namespace WeaponShop
                     }
                      
                     int weaponCount = inventoryData.weapons != null ? inventoryData.weapons.Count : 0;
-                    Debug.Log($"✓ Инвентарь загружен из persistentDataPath. Оружий: {weaponCount}, Текущее: {inventoryData.currentWeaponId}");
             }
             catch (Exception e)
             {
                 Debug.LogError($"Ошибка загрузки инвентаря: {e.Message}");
-                CreateDefaultInventory();
             }
         }
 
@@ -326,44 +310,17 @@ namespace WeaponShop
             }
         }
 
-        /// <summary>
-        /// Создаёт инвентарь по умолчанию.
-        /// </summary>
-        private void CreateDefaultInventory()
-        {
-            inventoryData = new InventoryData
-            {
-                playerId = "test_player",
-                currencyBalance = 1000,
-                weapons = new Dictionary<string, WeaponInventoryItem>(),
-                currentWeaponId = null,
-                maxWeapons = 5
-            };
-        }
-
-        /// <summary>
-        /// Корутина для удаления невыбранных оружий с задержкой.
-        /// </summary>
-        private System.Collections.IEnumerator RemoveUnselectedWeaponsDelayed()
-        {
-            yield return new WaitForSeconds(weaponRemovalDelay);
-            RemoveUnselectedWeapons();
-        }
 
         /// <summary>
         /// Удаляет невыбранные оружия из инвентаря игрока.
         /// </summary>
         private void RemoveUnselectedWeapons()
         {
-            Debug.Log("=== Начинаем удаление невыбранных оружий ===");
-            
             if (inventoryData == null || inventoryData.weapons == null)
             {
                 Debug.LogWarning("Данные инвентаря не загружены.");
                 return;
             }
-
-            Debug.Log($"Загружено оружий в JSON: {inventoryData.weapons.Count}");
 
             // Находим инвентарь игрока и получаем все оружия (включая неактивные)
             var playerInventory = FindObjectOfType<InfimaGames.LowPolyShooterPack.Inventory>();
@@ -380,13 +337,10 @@ namespace WeaponShop
             if (equippedField != null)
             {
                 equippedWeapon = equippedField.GetValue(playerInventory) as InfimaGames.LowPolyShooterPack.WeaponBehaviour;
-                if (equippedWeapon != null)
-                    Debug.Log($"Экипированное оружие: {equippedWeapon.name}");
             }
 
             // Получаем все дочерние WeaponBehaviour из инвентаря игрока (включая неактивные)
             var allWeapons = playerInventory.GetComponentsInChildren<InfimaGames.LowPolyShooterPack.WeaponBehaviour>(true);
-            Debug.Log($"Найдено WeaponBehaviour в инвентаре игрока: {allWeapons.Length}");
             
             int removedCount = 0;
             int checkedCount = 0;
@@ -397,35 +351,45 @@ namespace WeaponShop
                 string weaponName = weapon.name;
                 checkedCount++;
                 
-                Debug.Log($"Проверяем оружие: '{weaponName}'");
-                
                 bool isSelected = IsWeaponSelected(weaponName);
-                Debug.Log($"  Результат IsWeaponSelected: {isSelected}");
                 
                 if (!isSelected)
                 {
-                    Debug.Log($"  >>> Помечаем для удаления: {weaponName}");
                     weaponsToDestroy.Add(weapon.gameObject);
                     removedCount++;
                     
                     // Проверяем, будет ли удалено экипированное оружие
                     if (equippedWeapon != null && weapon == equippedWeapon)
                     {
-                        Debug.Log($"  >>> Экипированное оружие будет удалено! Деактивируем его модель.");
                         // Деактивируем модель оружия, чтобы убрать её из рук игрока
                         weapon.gameObject.SetActive(false);
                     }
                 }
             }
 
-            Debug.Log($"=== Проверено {checkedCount} оружий, помечено для удаления {removedCount} ===");
             weaponsProcessed = true;
              
             // Сначала уничтожаем GameObjects (в следующем кадре)
-            StartCoroutine(DestroyWeaponsNextFrame(weaponsToDestroy));
+            foreach (var weaponObj in weaponsToDestroy)
+            {
+                if (weaponObj != null)
+                {
+                    Destroy(weaponObj);
+                }
+            }
+            //StartCoroutine(DestroyWeaponsNextFrame(weaponsToDestroy));
              
             // Затем обновляем инвентарь после удаления (задержка чтобы удаления успели выполниться)
-            StartCoroutine(RefreshInventoryAfterDestroy());
+            
+            var inventory = FindObjectOfType<InfimaGames.LowPolyShooterPack.Inventory>();
+            Debug.Log("-------------------Inventory----------------------");
+            if (inventory != null) {
+                Debug.Log("-------------------Init----------------------");
+                inventory.Init(0);
+            }
+            var character = FindObjectOfType<InfimaGames.LowPolyShooterPack.Character>();
+            character.RefreshWeaponSetup();
+            //StartCoroutine(RefreshInventoryAfterDestroy());
         }
 
         /// <summary>
@@ -439,13 +403,6 @@ namespace WeaponShop
             yield return null;
             
             RefreshInventoryWeapons();
-            
-            // Инициализируем инвентарь игрока после удаления оружий
-            var playerInventory = FindObjectOfType<InfimaGames.LowPolyShooterPack.Inventory>();
-            if (playerInventory != null)
-            {
-                playerInventory.Init();
-            }
         }
 
         /// <summary>
@@ -455,12 +412,10 @@ namespace WeaponShop
         {
             yield return null; // Ждем следующего кадра
             
-            Debug.Log($"=== Уничтожаем {weaponsToDestroy.Count} оружий ===");
             foreach (var weaponObj in weaponsToDestroy)
             {
                 if (weaponObj != null)
                 {
-                    Debug.Log($"  Уничтожаем: {weaponObj.name}");
                     Destroy(weaponObj);
                 }
             }
@@ -471,27 +426,20 @@ namespace WeaponShop
         /// </summary>
         private bool IsWeaponSelected(string weaponName)
         {
-            Debug.Log($"    IsWeaponSelected('{weaponName}')");
-            
             if (inventoryData == null || inventoryData.weapons == null)
             {
-                Debug.Log($"      Данные инвентаря null, возвращаем false");
                 return false;
             }
 
             foreach (var kvp in inventoryData.weapons)
             {
-                Debug.Log($"      Проверяем: weaponId='{kvp.Value.weaponId}', selected={kvp.Value.selected}");
-                
                 // Нечувствительная к регистру проверка - имена в сцене имеют префикс P_LPSP_WEP_ и заглавные буквы
                 if (weaponName.IndexOf(kvp.Value.weaponId, System.StringComparison.OrdinalIgnoreCase) >= 0)
                 {
-                    Debug.Log($"      ✓ Совпадение найдено! Возвращаем {kvp.Value.selected}");
                     return kvp.Value.selected;
                 }
             }
 
-            Debug.Log($"      Совпадений не найдено, возвращаем false");
             return false;
         }
 
@@ -561,7 +509,6 @@ namespace WeaponShop
                     if (weaponName.IndexOf(selectedWeaponId, System.StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         selectedWeaponIndex = i;
-                        Debug.Log($"Найден выбранный индекс: {selectedWeaponIndex} для оружия: {selectedWeaponId}");
                         break;
                     }
                 }
@@ -579,7 +526,6 @@ namespace WeaponShop
             if (refreshMethod != null)
             {
                 refreshMethod.Invoke(playerInventory, System.Reflection.BindingFlags.InvokeMethod, null, new object[] { selectedWeaponIndex }, System.Globalization.CultureInfo.CurrentCulture);
-                Debug.Log($"Обновляем инвентарь и экипируем индекс {selectedWeaponIndex}. Осталось {remainingWeapons.Length} оружий.");
             }
              
             // Получаем компонент Character для обновления анимации
@@ -593,7 +539,6 @@ namespace WeaponShop
                 if (setHolsteredMethod != null)
                 {
                     setHolsteredMethod.Invoke(character, System.Reflection.BindingFlags.InvokeMethod, null, new object[] { false }, System.Globalization.CultureInfo.CurrentCulture);
-                    Debug.Log("Вызван SetHolstered(false).");
                 }
                 
                 // Получаем аниматор персонажа через рефлексию
@@ -613,7 +558,6 @@ namespace WeaponShop
                         
                         // Играем анимацию Unholster
                         characterAnimator.Play("Unholster", layerHolster, 0);
-                        Debug.Log($"Сыграна анимация Unholster на слое {layerHolster}.");
                     }
                 }
                 
@@ -622,7 +566,6 @@ namespace WeaponShop
                 if (refreshWeaponSetupMethod != null)
                 {
                     refreshWeaponSetupMethod.Invoke(character, System.Reflection.BindingFlags.InvokeMethod, null, null, System.Globalization.CultureInfo.CurrentCulture);
-                    Debug.Log("Обновлена анимация оружия через RefreshWeaponSetup.");
                 }
                 else
                 {

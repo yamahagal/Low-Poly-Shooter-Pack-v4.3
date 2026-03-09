@@ -83,14 +83,22 @@ namespace InfimaGames.LowPolyShooterPack
                 lowered = false;
             
             //Make sure that the equipped weapon has a ItemAnimationDataBehaviour.
-            var animationData = inventoryBehaviour.GetEquipped().GetComponent<ItemAnimationDataBehaviour>();
-            if (animationData == null)
+            var equippedWeapon = inventoryBehaviour.GetEquipped();
+            if (equippedWeapon == null)
+            {
                 lowered = false;
+            }
             else
             {
-                //Check that the current weapon equipped has the necessary data for lowering.
-                if (animationData.GetLowerData() == null)
+                var animationData = equippedWeapon.GetComponent<ItemAnimationDataBehaviour>();
+                if (animationData == null)
                     lowered = false;
+                else
+                {
+                    //Check that the current weapon equipped has the necessary data for lowering.
+                    if (animationData.GetLowerData() == null)
+                        lowered = false;
+                }
             }
             
             //Update Animator Lowered.
