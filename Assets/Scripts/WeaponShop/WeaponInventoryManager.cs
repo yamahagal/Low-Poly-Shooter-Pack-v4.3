@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
+using Game;
 using Newtonsoft.Json;
 
 namespace WeaponShop

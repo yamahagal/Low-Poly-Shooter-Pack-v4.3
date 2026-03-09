@@ -7,8 +7,7 @@
         "Unity.InputSystem",
         "Unity.RenderPipeline.Universal",
         "Toolbox",
-        "InfimaGames.Tools",
-        "WeaponShop"
+        "InfimaGames.Tools"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
