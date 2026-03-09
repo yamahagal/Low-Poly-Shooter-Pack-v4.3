@@ -49,13 +49,6 @@ namespace WeaponShop
 
         private void Start()
         {
-            // Инициализируем инвентарь игрока
-            var playerInventory = FindObjectOfType<InfimaGames.LowPolyShooterPack.Inventory>();
-            if (playerInventory != null)
-            {
-                playerInventory.Init();
-            }
-            
             if (removeUnselectedWeapons && !weaponsProcessed)
             {
                 StartCoroutine(RemoveUnselectedWeaponsDelayed());
@@ -446,6 +439,13 @@ namespace WeaponShop
             yield return null;
             
             RefreshInventoryWeapons();
+            
+            // Инициализируем инвентарь игрока после удаления оружий
+            var playerInventory = FindObjectOfType<InfimaGames.LowPolyShooterPack.Inventory>();
+            if (playerInventory != null)
+            {
+                playerInventory.Init();
+            }
         }
 
         /// <summary>
