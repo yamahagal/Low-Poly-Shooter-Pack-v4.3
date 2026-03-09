@@ -117,16 +117,16 @@ namespace InfimaGames.LowPolyShooterPack
                     }
                 }
 
-                // Удаляем GameObjects
+                // Удаляем GameObjects мгновенно
                 foreach (var weaponObj in weaponsToDestroy)
                 {
                     if (weaponObj != null)
                     {
-                        Destroy(weaponObj);
+                        DestroyImmediate(weaponObj);
                     }
                 }
                 
-                Debug.Log($"Удалено {removedCount} невыбранных оружий из инвентаря.");
+                Debug.Log($"Удалено {removedCount} невыбранных оружий из инвентаря. Осталось: {allWeapons.Length - removedCount}");
             }
             catch (Exception e)
             {
