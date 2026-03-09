@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+namespace InfimaGames.LowPolyShooterPack
 {
     /// <summary>
     /// Данные об оружии для загрузки из JSON файла.
