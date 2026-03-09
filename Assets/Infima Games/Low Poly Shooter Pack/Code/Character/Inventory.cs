@@ -61,7 +61,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         public void RemoveUnselectedWeaponsFromJson()
         {
-            string fullPath = Path.Combine(Application.persistentDataPath, inventoryFilePath);
+            string fullPath = Path.Combine(Application.dataPath, inventoryFilePath);
             
             if (!File.Exists(fullPath))
             {
