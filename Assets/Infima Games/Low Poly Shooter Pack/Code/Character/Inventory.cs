@@ -72,7 +72,7 @@ namespace InfimaGames.LowPolyShooterPack
             try
             {
                 string json = File.ReadAllText(fullPath);
-                var data = JsonConvert.DeserializeObject<Game.InventoryData>(json);
+                var data = JsonConvert.DeserializeObject<InventoryData>(json);
                 
                 if (data == null || data.weapons == null)
                 {

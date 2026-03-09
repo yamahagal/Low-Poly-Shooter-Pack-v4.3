@@ -7,8 +7,7 @@
         "Unity.InputSystem",
         "Unity.RenderPipeline.Universal",
         "Toolbox",
-        "InfimaGames.Tools",
-        "GameData"
+        "InfimaGames.Tools"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

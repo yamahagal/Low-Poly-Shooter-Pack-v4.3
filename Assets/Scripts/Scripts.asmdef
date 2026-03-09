@@ -5,8 +5,7 @@
         "Unity.TextMeshPro",
         "UnityEngine.UI",
         "Unity.InputSystem",
-        "InfimaGames.LowPolyShooterPack",
-        "GameData"
+        "InfimaGames.LowPolyShooterPack"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

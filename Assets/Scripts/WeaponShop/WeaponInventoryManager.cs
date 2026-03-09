@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
-using Game;
+using InfimaGames.LowPolyShooterPack;
 using Newtonsoft.Json;
 
 namespace WeaponShop
