@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Game;
 using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -73,7 +72,7 @@ namespace InfimaGames.LowPolyShooterPack
             try
             {
                 string json = File.ReadAllText(fullPath);
-                var data = JsonConvert.DeserializeObject<WeaponDataJSON>(json);
+                var data = JsonConvert.DeserializeObject<Game.InventoryData>(json);
                 
                 if (data == null || data.weapons == null)
                 {
