@@ -43,15 +43,20 @@ namespace InfimaGames.LowPolyShooterPack
         public override void Init(int equippedAtStart = 0) {
             RemoveUnselectedWeaponsFromJson();
 
+            GetWeaponList(equippedAtStart);
+        }
+
+
+        public void GetWeaponList(int equippedAtStart)
+        {
             //Cache all weapons. Beware that weapons need to be parented to the object this component is on!
-            weapons = GetComponentsInChildren<WeaponBehaviour>();
+            weapons = GetComponentsInChildren<WeaponBehaviour>(true);
 
             //Disable all weapons. This makes it easier for us to only activate the one we need.
             foreach (WeaponBehaviour weapon in weapons) {
                 weapon.gameObject.SetActive(false);
             }
-                
-
+                 
             //Equip.
             Equip(equippedAtStart);
         }
@@ -151,6 +156,7 @@ namespace InfimaGames.LowPolyShooterPack
             equippedIndex = index;
             //Update equipped.
             equipped = weapons[equippedIndex];
+            Debug.Log(weapons.Length);
             //Activate the newly-equipped weapon.
             equipped.gameObject.SetActive(true);
 
