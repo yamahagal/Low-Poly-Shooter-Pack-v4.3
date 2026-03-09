@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemySpawner : MonoBehaviour {
+namespace InfimaGames.LowPolyShooterPack
+{
+    public class EnemySpawner : MonoBehaviour {
 
     public int count;
     public GameObject enemy;
@@ -20,5 +22,6 @@ public class EnemySpawner : MonoBehaviour {
             go.GetComponent<EnemyNavigation>().Target = Target;
             go.GetComponent<EnemyNavigation>().MainCamera = MainCamera;
         }
+    }
     }
 }

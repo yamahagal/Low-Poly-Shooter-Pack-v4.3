@@ -152,9 +152,9 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
             }
             if (collision.transform.tag == "EnemyBody")
             {
-				//Toggle "isHit" on target object
-				collision.transform.GetComponentInParent<EnemyNavigation>().CheckHit(damage, GetComponent<Rigidbody>().velocity - transform.forward, transform.position);     //collision.transform.gameObject.GetComponent<EnemyScript>().CheckHit(damage);
-                                                                                                  //Destroy bullet object
+    //Toggle "isHit" on target object
+    collision.transform.GetComponentInParent<EnemyNavigation>().CheckHit(damage, GetComponent<Rigidbody>().velocity - transform.forward, transform.position);     //collision.transform.gameObject.GetComponent<EnemyScript>().CheckHit(damage);
+                //Destroy bullet object
                 Instantiate(bloodImpactPrefabs[Random.Range
                         (0, bloodImpactPrefabs.Length)], transform.position,
                     Quaternion.LookRotation(collision.contacts[0].normal));
@@ -164,7 +164,7 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
             {
                 //Toggle "isHit" on target object
                 collision.transform.GetComponentInParent<EnemyNavigation>().CheckHit(damage*0.75f, GetComponent<Rigidbody>().velocity - transform.forward, transform.position);   //collision.transform.gameObject.GetComponent<EnemyScript>().CheckHit(damage);
-                                                                                                      //Destroy bullet object
+                //Destroy bullet object
                 Instantiate(bloodImpactPrefabs[Random.Range
                         (0, bloodImpactPrefabs.Length)], transform.position,
                     Quaternion.LookRotation(collision.contacts[0].normal));

@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
-public class EnemyNavigation : MonoBehaviour {
+namespace InfimaGames.LowPolyShooterPack
+{
+    public class EnemyNavigation : MonoBehaviour {
     [Header("Navigation")]
     private NavMeshAgent agent;
     public Transform Target;
@@ -209,5 +209,6 @@ public class EnemyNavigation : MonoBehaviour {
     private IEnumerator Firerate() {
         yield return new WaitForSeconds(timeBtwShots);
         canShoot = true;
+    }
     }
 }

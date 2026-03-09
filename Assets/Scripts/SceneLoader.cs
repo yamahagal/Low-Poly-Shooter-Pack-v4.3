@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
-    public Shop shop;
+    //public Shop shop;
     // Start is called before the first frame update
     void Start()
     {

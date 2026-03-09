@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2aaed2fec872247906ec4500dc5062, type: 3}
+  m_Name: AR1
+  m_EditorClassIdentifier: 
+  weaponId: AR1
+  weaponName: AR1
+  weaponType: 3
+  weaponPrefab: {fileID: 2435008889485827590, guid: 4ae0c091af4c1d24b9a48b303258ab0f,
+    type: 3}
+  weaponIcon: {fileID: 21300000, guid: dccc05b8d01dde54f88f9910329187c2, type: 3}
+  baseCost: 0
+  damage: 100
+  fireRate: 200
+  magazineCapacity: 30
+  reloadTime: 2.5
+  accuracy: 0.25
+  range: 100

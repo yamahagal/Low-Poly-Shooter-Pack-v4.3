@@ -1,0 +1,17 @@
+{
+    "name": "InfimaGames.Tools",
+    "references": [
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "UnityEngine.UIElements",
+        "Toolbox"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "noEngineReferences": false
+}

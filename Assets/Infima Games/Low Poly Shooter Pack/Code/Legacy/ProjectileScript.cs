@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using System.Collections;
+using InfimaGames.LowPolyShooterPack;
 
 namespace InfimaGames.LowPolyShooterPack.Legacy
 {

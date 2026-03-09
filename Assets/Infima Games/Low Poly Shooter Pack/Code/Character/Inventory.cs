@@ -26,45 +26,28 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         private int equippedIndex = -1;
 
-        public SaveSystem.PlayerData data;
-        public Material[] materials;
-
         #endregion
 
         #region METHODS
 
-        public void Awake() {
-            // Ищем SaveSystem в сцене, так как он может быть в другом namespace
-            var saveSystem = FindObjectOfType<SaveSystem>();
-            if (saveSystem == null)
-            {
-                Debug.LogError("SaveSystem не найден в сцене!");
-                return;
-            }
-            data = saveSystem.Load("C:\\Unity\\Low Poly Shooter Pack v4.3\\Saves");
-        }
 
-        public override void Init(int equippedAtStart = 0)
-        {
-            
-
-            bool destroy = true;
-            Weapon[] _weap = GetComponentsInChildren<Weapon>(true);
-            foreach (Weapon w in _weap) {
-                destroy = true;
-                foreach (WeaponShopSettings WSS in data.weapons) {
-                    if (WSS.weaponName == w.weaponName) {
-                        if (WSS.hasPlayerWeapon) {
-                            destroy = false;
-                            new AutoMaterial().MaterialChange(materials[WSS.currentSkinIndex], w.gameObject);
-                            w.gameObject.SetActive(true);
-                        }
-                    }
-                }
-                if (destroy) {
-                    Destroy(w.gameObject);
-                }
-            }
+        public override void Init(int equippedAtStart = 0) {
+            // bool destroy = true;
+            // Weapon[] _weap = GetComponentsInChildren<Weapon>(true);
+            // foreach (Weapon w in _weap) {
+            //     destroy = true;
+            //     foreach (WeaponShopSettings WSS in data.weapons) {
+            //         if (WSS.weaponName == w.weaponName) {
+            //             if (WSS.hasPlayerWeapon) {
+            //                 destroy = false;
+            //                 w.gameObject.SetActive(true);
+            //             }
+            //         }
+            //     }
+            //     if (destroy) {
+            //         Destroy(w.gameObject);
+            //     }
+            // }
 
             //Cache all weapons. Beware that weapons need to be parented to the object this component is on!
             weapons = GetComponentsInChildren<WeaponBehaviour>();

@@ -209,8 +209,8 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         public void Quit()
         {
             //Quit.
-            //Application.Quit();
-            new SceneLoader().OpenMenuScene();
+            Application.Quit();
+            //new SceneLoader().OpenMenuScene();
         }
 
         #endregion
