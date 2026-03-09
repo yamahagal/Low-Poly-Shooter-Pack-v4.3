@@ -57,7 +57,7 @@ namespace InfimaGames.LowPolyShooterPack
         }
 
         /// <summary>
-        /// Удаляет невыбранные оружия из JSON-файла инвентаря.
+        /// Удаляет невыбранные оружия из инвентаря игрока на основе данных из JSON-файла.
         /// </summary>
         public void RemoveUnselectedWeaponsFromJson()
         {
@@ -80,25 +80,48 @@ namespace InfimaGames.LowPolyShooterPack
                     return;
                 }
 
-                var weaponsToRemove = new List<string>();
+                // Получаем все оружия в инвентаре игрока
+                var allWeapons = GetComponentsInChildren<WeaponBehaviour>(true);
                 
-                foreach (var kvp in data.weapons)
+                int removedCount = 0;
+                var weaponsToDestroy = new System.Collections.Generic.List<GameObject>();
+
+                foreach (var weapon in allWeapons)
                 {
-                    if (!kvp.Value.selected)
+                    string weaponName = weapon.name;
+                    bool isSelected = false;
+                    
+                    // Проверяем, выбрано ли оружие в JSON
+                    foreach (var kvp in data.weapons)
                     {
-                        weaponsToRemove.Add(kvp.Key);
+                        if (weaponName.IndexOf(kvp.Value.weaponId, System.StringComparison.OrdinalIgnoreCase) >= 0)
+                        {
+                            if (kvp.Value.selected)
+                            {
+                                isSelected = true;
+                            }
+                            break;
+                        }
+                    }
+                    
+                    // Если оружие не выбрано, добавляем в список на удаление
+                    if (!isSelected)
+                    {
+                        weaponsToDestroy.Add(weapon.gameObject);
+                        removedCount++;
                     }
                 }
 
-                foreach (var weaponId in weaponsToRemove)
+                // Удаляем GameObjects
+                foreach (var weaponObj in weaponsToDestroy)
                 {
-                    data.weapons.Remove(weaponId);
+                    if (weaponObj != null)
+                    {
+                        Destroy(weaponObj);
+                    }
                 }
-
-                string updatedJson = JsonConvert.SerializeObject(data, Formatting.Indented);
-                File.WriteAllText(fullPath, updatedJson);
                 
-                Debug.Log($"Удалено {weaponsToRemove.Count} невыбранных оружий из JSON-файла.");
+                Debug.Log($"Удалено {removedCount} невыбранных оружий из инвентаря.");
             }
             catch (Exception e)
             {

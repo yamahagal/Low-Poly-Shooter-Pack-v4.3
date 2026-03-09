@@ -1,30 +1,11 @@
 {
   "playerId": "test_player",
   "currencyBalance": 10000,
-  "currentWeaponId": "handgun_01",
-  "maxWeapons": 20,
   "weapons": {
     "handgun_01": {
       "weaponId": "handgun_01",
       "purchased": true,
-      "selected": true
-    },
-    "handgun_02": {
-      "weaponId": "handgun_02",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "handgun_03": {
-      "weaponId": "handgun_03",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "handgun_04": {
-      "weaponId": "handgun_04",
-      "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "smg_01": {
@@ -32,86 +13,10 @@
       "purchased": true,
       "selected": true,
       "addedTime": null
-    },
-    "smg_02": {
-      "weaponId": "smg_02",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "smg_03": {
-      "weaponId": "smg_03",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "smg_04": {
-      "weaponId": "smg_04",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "smg_05": {
-      "weaponId": "smg_05",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "ar_01": {
-      "weaponId": "ar_01",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "ar_02": {
-      "weaponId": "ar_02",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "ar_03": {
-      "weaponId": "ar_03",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "shotgun_01": {
-      "weaponId": "shotgun_01",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "sniper_01": {
-      "weaponId": "sniper_01",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "sniper_02": {
-      "weaponId": "sniper_02",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "sniper_03": {
-      "weaponId": "sniper_03",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "rl_01": {
-      "weaponId": "rl_01",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
-    },
-    "gl_01": {
-      "weaponId": "gl_01",
-      "purchased": true,
-      "selected": false,
-      "addedTime": null
     }
   },
+  "currentWeaponId": "handgun_01",
+  "maxWeapons": 20,
   "weaponDefinitions": {
     "handgun_01": {
       "weaponId": "handgun_01",
@@ -120,12 +25,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_01.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_01.prefab",
       "baseCost": 100,
-      "damage": 25,
+      "damage": 25.0,
       "fireRate": 300,
       "magazineCapacity": 12,
       "reloadTime": 1.5,
       "accuracy": 0.15,
-      "range": 50
+      "range": 50.0
     },
     "handgun_02": {
       "weaponId": "handgun_02",
@@ -134,12 +39,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_02.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_02.prefab",
       "baseCost": 150,
-      "damage": 30,
+      "damage": 30.0,
       "fireRate": 350,
       "magazineCapacity": 15,
       "reloadTime": 1.3,
       "accuracy": 0.12,
-      "range": 55
+      "range": 55.0
     },
     "handgun_03": {
       "weaponId": "handgun_03",
@@ -148,12 +53,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_03.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_03.prefab",
       "baseCost": 200,
-      "damage": 35,
+      "damage": 35.0,
       "fireRate": 400,
       "magazineCapacity": 18,
       "reloadTime": 1.2,
       "accuracy": 0.1,
-      "range": 60
+      "range": 60.0
     },
     "handgun_04": {
       "weaponId": "handgun_04",
@@ -162,12 +67,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_04.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Handgun_04.prefab",
       "baseCost": 250,
-      "damage": 40,
+      "damage": 40.0,
       "fireRate": 450,
       "magazineCapacity": 20,
       "reloadTime": 1.0,
       "accuracy": 0.08,
-      "range": 65
+      "range": 65.0
     },
     "smg_01": {
       "weaponId": "smg_01",
@@ -176,12 +81,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_01.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_01.prefab",
       "baseCost": 250,
-      "damage": 15,
+      "damage": 15.0,
       "fireRate": 800,
       "magazineCapacity": 30,
       "reloadTime": 2.0,
       "accuracy": 0.25,
-      "range": 40
+      "range": 40.0
     },
     "smg_02": {
       "weaponId": "smg_02",
@@ -190,12 +95,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_02.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_02.prefab",
       "baseCost": 300,
-      "damage": 18,
+      "damage": 18.0,
       "fireRate": 850,
       "magazineCapacity": 35,
       "reloadTime": 1.8,
       "accuracy": 0.22,
-      "range": 45
+      "range": 45.0
     },
     "smg_03": {
       "weaponId": "smg_03",
@@ -204,12 +109,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_03.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_03.prefab",
       "baseCost": 350,
-      "damage": 20,
+      "damage": 20.0,
       "fireRate": 900,
       "magazineCapacity": 40,
       "reloadTime": 1.6,
       "accuracy": 0.2,
-      "range": 50
+      "range": 50.0
     },
     "smg_04": {
       "weaponId": "smg_04",
@@ -218,12 +123,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_04.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_04.prefab",
       "baseCost": 400,
-      "damage": 22,
+      "damage": 22.0,
       "fireRate": 950,
       "magazineCapacity": 45,
       "reloadTime": 1.5,
       "accuracy": 0.18,
-      "range": 55
+      "range": 55.0
     },
     "smg_05": {
       "weaponId": "smg_05",
@@ -232,12 +137,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_05.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_SMG_05.prefab",
       "baseCost": 450,
-      "damage": 25,
+      "damage": 25.0,
       "fireRate": 1000,
       "magazineCapacity": 50,
       "reloadTime": 1.4,
       "accuracy": 0.15,
-      "range": 60
+      "range": 60.0
     },
     "ar_01": {
       "weaponId": "ar_01",
@@ -246,12 +151,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_AR_01.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_AR_01.prefab",
       "baseCost": 500,
-      "damage": 30,
+      "damage": 30.0,
       "fireRate": 600,
       "magazineCapacity": 30,
       "reloadTime": 2.5,
       "accuracy": 0.2,
-      "range": 100
+      "range": 100.0
     },
     "ar_02": {
       "weaponId": "ar_02",
@@ -260,12 +165,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_AR_02.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_AR_02.prefab",
       "baseCost": 600,
-      "damage": 35,
+      "damage": 35.0,
       "fireRate": 650,
       "magazineCapacity": 35,
       "reloadTime": 2.3,
       "accuracy": 0.18,
-      "range": 110
+      "range": 110.0
     },
     "ar_03": {
       "weaponId": "ar_03",
@@ -274,12 +179,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_AR_03.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_AR_03.prefab",
       "baseCost": 700,
-      "damage": 40,
+      "damage": 40.0,
       "fireRate": 700,
       "magazineCapacity": 40,
       "reloadTime": 2.0,
       "accuracy": 0.15,
-      "range": 120
+      "range": 120.0
     },
     "shotgun_01": {
       "weaponId": "shotgun_01",
@@ -288,12 +193,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Shotgun_01.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Shotgun_01.prefab",
       "baseCost": 750,
-      "damage": 80,
+      "damage": 80.0,
       "fireRate": 60,
       "magazineCapacity": 8,
       "reloadTime": 3.0,
       "accuracy": 0.4,
-      "range": 25
+      "range": 25.0
     },
     "sniper_01": {
       "weaponId": "sniper_01",
@@ -302,12 +207,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Sniper_01.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Sniper_01.prefab",
       "baseCost": 1000,
-      "damage": 100,
+      "damage": 100.0,
       "fireRate": 40,
       "magazineCapacity": 5,
       "reloadTime": 3.5,
       "accuracy": 0.05,
-      "range": 300
+      "range": 300.0
     },
     "sniper_02": {
       "weaponId": "sniper_02",
@@ -316,12 +221,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Sniper_02.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Sniper_02.prefab",
       "baseCost": 1200,
-      "damage": 120,
+      "damage": 120.0,
       "fireRate": 45,
       "magazineCapacity": 6,
       "reloadTime": 3.2,
       "accuracy": 0.04,
-      "range": 350
+      "range": 350.0
     },
     "sniper_03": {
       "weaponId": "sniper_03",
@@ -330,12 +235,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Sniper_03.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_Sniper_03.prefab",
       "baseCost": 1500,
-      "damage": 150,
+      "damage": 150.0,
       "fireRate": 50,
       "magazineCapacity": 7,
       "reloadTime": 3.0,
       "accuracy": 0.03,
-      "range": 400
+      "range": 400.0
     },
     "rl_01": {
       "weaponId": "rl_01",
@@ -344,12 +249,12 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_RL_01.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_RL_01.prefab",
       "baseCost": 2000,
-      "damage": 200,
+      "damage": 200.0,
       "fireRate": 30,
       "magazineCapacity": 1,
       "reloadTime": 4.0,
       "accuracy": 0.1,
-      "range": 200
+      "range": 200.0
     },
     "gl_01": {
       "weaponId": "gl_01",
@@ -358,12 +263,32 @@
       "weaponPrefabPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_GL_01.prefab",
       "weaponIconPath": "Assets/Infima Games/Low Poly Shooter Pack/prefabs/Weapons/P_LPSP_WEP_GL_01.prefab",
       "baseCost": 1800,
-      "damage": 180,
+      "damage": 180.0,
       "fireRate": 35,
       "magazineCapacity": 1,
       "reloadTime": 3.8,
       "accuracy": 0.15,
-      "range": 150
+      "range": 150.0
     }
+  },
+  "Weapons": {
+    "handgun_01": {
+      "weaponId": "handgun_01",
+      "purchased": true,
+      "selected": true,
+      "addedTime": null
+    },
+    "smg_01": {
+      "weaponId": "smg_01",
+      "purchased": true,
+      "selected": true,
+      "addedTime": null
+    }
+  },
+  "CurrentWeapon": {
+    "weaponId": "handgun_01",
+    "purchased": true,
+    "selected": true,
+    "addedTime": null
   }
 }
