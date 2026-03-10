@@ -5,7 +5,7 @@ using UnityEngine;
 namespace InfimaGames.LowPolyShooterPack
 {
     /// <summary>
-    /// ItemAnimationData. Stores all information related to the weapon-specific procedural data.
+    /// ItemAnimationData. Stores all information related to weapon-specific procedural data.
     /// </summary>
     public class ItemAnimationData : ItemAnimationDataBehaviour
     {
@@ -14,31 +14,31 @@ namespace InfimaGames.LowPolyShooterPack
         [Title(label: "Item Offsets")]
 
         [Tooltip("The object that contains all offset data for this item.")]
-        [SerializeField, InLineEditor]
+        [SerializeField]
         private ItemOffsets itemOffsets;
         
         [Title(label: "Lowered Data")]
 
-        [Tooltip("This object contains all the data needed for us to set the lowered pose of this weapon.")]
-        [SerializeField, InLineEditor]
+        [Tooltip("This object contains all data needed for us to set lowered pose of this weapon.")]
+        [SerializeField]
         private LowerData lowerData;
 
         [Title(label: "Leaning Data")]
 
-        [Tooltip("LeaningData. Contains all the information on what this weapon should do while the character is leaning.")]
-        [SerializeField, InLineEditor]
+        [Tooltip("LeaningData. Contains all information on what this weapon should do while character is leaning.")]
+        [SerializeField]
         private LeaningData leaningData;
         
         [Title(label: "Camera Recoil Data")]
 
         [Tooltip("Weapon Recoil Data Asset. Used to get some camera recoil values, usually for weapons.")]
-        [SerializeField, InLineEditor]
+        [SerializeField]
         private RecoilData cameraRecoilData;
         
         [Title(label: "Weapon Recoil Data")]
 
         [Tooltip("Weapon Recoil Data Asset. Used to get some recoil values, usually for weapons.")]
-        [SerializeField, InLineEditor]
+        [SerializeField]
         private RecoilData weaponRecoilData;
 
         #endregion

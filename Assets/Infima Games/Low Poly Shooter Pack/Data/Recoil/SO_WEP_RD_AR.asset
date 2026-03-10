@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standingStateMultiplier: 1
   standingState: {fileID: 11400000, guid: 580799675508ed047bdbf0e47b491b4b, type: 2}
-  aimingStateMultiplier: 0.35
+  aimingStateMultiplier: 0.312
   aimingState: {fileID: 11400000, guid: 580799675508ed047bdbf0e47b491b4b, type: 2}

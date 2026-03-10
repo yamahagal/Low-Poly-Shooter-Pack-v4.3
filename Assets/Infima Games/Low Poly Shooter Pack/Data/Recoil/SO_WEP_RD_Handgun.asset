@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 355e4f9f697079548abc2f1f2b33b97f, type: 3}
-  m_Name: SO_WEP_RD_Camera
+  m_Name: SO_WEP_RD_Handgun
   m_EditorClassIdentifier: 
   standingStateMultiplier: 1
-  standingState: {fileID: 11400000, guid: 51deff0e3ce5b0945bc0e61a860ad246, type: 2}
-  aimingStateMultiplier: 0.401
-  aimingState: {fileID: 11400000, guid: 51deff0e3ce5b0945bc0e61a860ad246, type: 2}
+  standingState: {fileID: 11400000, guid: 8f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c, type: 2}
+  aimingStateMultiplier: 0.4
+  aimingState: {fileID: 11400000, guid: 8f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c, type: 2}

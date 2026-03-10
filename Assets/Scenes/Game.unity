@@ -5218,8 +5218,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 448958757, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
+      propertyPath: jumpForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 448958757, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
       propertyPath: airControl
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448958757, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
+      propertyPath: accelerationInAir
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 519079964621657, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
       propertyPath: m_TagString
@@ -7232,6 +7240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: IgnoreMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199134342893800965, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4199134342896062661, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
@@ -10946,7 +10959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeebb686ab507894daca84886b3df6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 20
+  count: 0
   enemy: {fileID: 2338958572113860438, guid: ce8d743b2d2ab174da8c474763286904, type: 3}
   SpawnPoint: {fileID: 644361272}
   points: {fileID: 1578770076}
@@ -12640,13 +12653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_OverrideGenerateLinks: 0
-  m_GenerateLinks: 0
-  m_IgnoreFromBuild: 0
-  m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
 --- !u!1 &1659068646
 GameObject:
   m_ObjectHideFlags: 0

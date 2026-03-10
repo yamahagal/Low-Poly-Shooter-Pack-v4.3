@@ -12,19 +12,19 @@
     "handgun_02": {
       "weaponId": "handgun_02",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "handgun_03": {
       "weaponId": "handgun_03",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "handgun_04": {
       "weaponId": "handgun_04",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "smg_01": {
