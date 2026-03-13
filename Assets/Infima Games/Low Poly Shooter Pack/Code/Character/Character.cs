@@ -372,6 +372,11 @@ namespace InfimaGames.LowPolyShooterPack
 					shotsFired = 0;
 				}
 			}
+			
+			//Reset shotsFired if enough time has passed since the last shot.
+			//This allows recoil to accumulate during rapid fire but resets when player pauses.
+			if (shotsFired > 0 && Time.time - lastShotTime > 0.5f)
+				shotsFired = 0;
 
 			//Update Animator.
 			UpdateAnimator();
@@ -1050,9 +1055,6 @@ namespace InfimaGames.LowPolyShooterPack
 				case {phase: InputActionPhase.Started}:
 					//Hold.
 					holdingButtonFire = true;
-					
-					//Restart the shots.
-					shotsFired = 0;
 					break;
 				//Performed.
 				case {phase: InputActionPhase.Performed}:
@@ -1086,9 +1088,6 @@ namespace InfimaGames.LowPolyShooterPack
 				case {phase: InputActionPhase.Canceled}:
 					//Stop Hold.
 					holdingButtonFire = false;
-
-					//Reset shotsFired.
-					shotsFired = 0;
 					break;
 			}
 		}
