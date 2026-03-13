@@ -231,6 +231,11 @@ namespace InfimaGames.LowPolyShooterPack
 		private float runningAlpha;
 
 		/// <summary>
+		/// Breath Holding Alpha. This value dictates how much the breath holding effect is applied.
+		/// </summary>
+		private float breathHoldingAlpha;
+
+		/// <summary>
 		/// Look Axis Values.
 		/// </summary>
 		private Vector2 axisLook;
@@ -334,6 +339,9 @@ namespace InfimaGames.LowPolyShooterPack
 			//Match Run.
 			running = holdingButtonRun && CanRun();
 
+			bool holdingBreath = (Input.GetKey(KeyCode.LeftShift)) && aiming;
+
+
 			//Check if we're aiming.
 			switch (aiming)
 			{
@@ -357,7 +365,7 @@ namespace InfimaGames.LowPolyShooterPack
 					if (Time.time - lastShotTime > 60.0f / equippedWeapon.GetRateOfFire())
 						Fire();
 				}
-				else
+				else if (equippedWeapon.IsAutomatic())
 				{
 					//Reset fired shots, so recoil/spread does not just stay at max when we've run out
 					//of ammo already!
@@ -379,13 +387,19 @@ namespace InfimaGames.LowPolyShooterPack
 			//Running Field Of View Multiplier.
 			float runningFieldOfView = Mathf.Lerp(1.0f, fieldOfViewRunningMultiplier, runningAlpha);
 			
+			//Interpolate the breath holding alpha for smooth transition.
+			breathHoldingAlpha = Mathf.Lerp(breathHoldingAlpha, holdingBreath ? 1.0f : 0.0f, Time.deltaTime * 8.0f);
+			
+			//Breath Holding Multiplier. Reduces field of view by half when holding breath while aiming.
+			float breathHoldingMultiplier = Mathf.Lerp(1.0f, 0.5f, breathHoldingAlpha);
+			
 			//Make sure we have an equipped weapon before accessing it.
 			if (equippedWeapon != null)
 			{
 				//Interpolate the world camera's field of view based on whether we are aiming or not.
 				cameraWorld.fieldOfView = Mathf.Lerp(fieldOfView, fieldOfView * equippedWeapon.GetFieldOfViewMultiplierAim(), aimingAlpha) * runningFieldOfView;
 				//Interpolate the depth camera's field of view based on whether we are aiming or not.
-				cameraDepth.fieldOfView = Mathf.Lerp(fieldOfViewWeapon, fieldOfViewWeapon * equippedWeapon.GetFieldOfViewMultiplierAimWeapon(), aimingAlpha);
+				cameraDepth.fieldOfView = Mathf.Lerp(fieldOfViewWeapon, fieldOfViewWeapon * equippedWeapon.GetFieldOfViewMultiplierAimWeapon(), aimingAlpha) * breathHoldingMultiplier;
 			}
 			
 			//Save Aiming Value.
