@@ -1,0 +1,1106 @@
+{
+  "weaponsAttachments": {
+    "ar_01": {
+      "weaponId": "ar_01",
+      "weaponName": "Автомат AR-01",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": "scope_acog",
+          "availableAttachments": ["scope_red_dot", "scope_acog"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": "muzzle_silencer",
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical", "grip_angled"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": "magazine_extended",
+          "availableAttachments": ["magazine_extended", "magazine_drum"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": ["bipod_basic"],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        },
+        "cqb": {
+          "name": "Боевая комплектация",
+          "attachments": {
+            "scope": "scope_red_dot",
+            "muzzle": "muzzle_compensator",
+            "laser": "laser_basic",
+            "grip": "grip_vertical",
+            "magazine": "magazine_extended",
+            "bipod": null
+          }
+        },
+        "stealth": {
+          "name": "Скрытная комплектация",
+          "attachments": {
+            "scope": "scope_red_dot",
+            "muzzle": "muzzle_silencer",
+            "laser": null,
+            "grip": null,
+            "magazine": "magazine_extended",
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "cqb"
+    },
+    "ar_02": {
+      "weaponId": "ar_02",
+      "weaponName": "Автомат AR-02",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": "scope_acog",
+          "availableAttachments": ["scope_red_dot", "scope_acog"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": "muzzle_silencer",
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical", "grip_angled"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended", "magazine_drum"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": ["bipod_basic"],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        },
+        "tactical": {
+          "name": "Тактическая комплектация",
+          "attachments": {
+            "scope": "scope_acog",
+            "muzzle": "muzzle_silencer",
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "tactical"
+    },
+    "ar_03": {
+      "weaponId": "ar_03",
+      "weaponName": "Автомат AR-03",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": "scope_red_dot",
+          "availableAttachments": ["scope_red_dot", "scope_acog"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": "muzzle_compensator",
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical", "grip_angled"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended", "magazine_drum"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": ["bipod_basic"],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        },
+        "assault": {
+          "name": "Штурмовая комплектация",
+          "attachments": {
+            "scope": "scope_red_dot",
+            "muzzle": "muzzle_compensator",
+            "laser": "laser_basic",
+            "grip": "grip_vertical",
+            "magazine": "magazine_extended",
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "gl_01": {
+      "weaponId": "gl_01",
+      "weaponName": "Гранатомёт GL-01",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "handgun_01": {
+      "weaponId": "handgun_01",
+      "weaponName": "Пистолет HG-01",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": "laser_basic",
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        },
+        "tactical": {
+          "name": "Тактическая комплектация",
+          "attachments": {
+            "scope": "scope_red_dot",
+            "muzzle": "muzzle_silencer",
+            "laser": "laser_basic",
+            "grip": null,
+            "magazine": "magazine_extended",
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "handgun_02": {
+      "weaponId": "handgun_02",
+      "weaponName": "Пистолет HG-02",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "handgun_03": {
+      "weaponId": "handgun_03",
+      "weaponName": "Пистолет HG-03",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "handgun_04": {
+      "weaponId": "handgun_04",
+      "weaponName": "Пистолет HG-04",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "rl_01": {
+      "weaponId": "rl_01",
+      "weaponName": "Реактивный гранатомёт RL-01",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_acog"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": ["bipod_basic"],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "shotgun_01": {
+      "weaponId": "shotgun_01",
+      "weaponName": "Дробовик Shotgun-01",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical", "grip_angled"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        },
+        "close_quarters": {
+          "name": "Ближний бой",
+          "attachments": {
+            "scope": "scope_red_dot",
+            "muzzle": "muzzle_compensator",
+            "laser": "laser_basic",
+            "grip": "grip_vertical",
+            "magazine": "magazine_extended",
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "smg_01": {
+      "weaponId": "smg_01",
+      "weaponName": "ПП SMG-01",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": "scope_red_dot",
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": "muzzle_compensator",
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": "laser_basic",
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        },
+        "rapid": {
+          "name": "Быстрый огонь",
+          "attachments": {
+            "scope": "scope_red_dot",
+            "muzzle": "muzzle_compensator",
+            "laser": "laser_basic",
+            "grip": "grip_vertical",
+            "magazine": "magazine_extended",
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "rapid"
+    },
+    "smg_02": {
+      "weaponId": "smg_02",
+      "weaponName": "ПП SMG-02",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "smg_03": {
+      "weaponId": "smg_03",
+      "weaponName": "ПП SMG-03",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "smg_04": {
+      "weaponId": "smg_04",
+      "weaponName": "ПП SMG-04",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "smg_05": {
+      "weaponId": "smg_05",
+      "weaponName": "ПП SMG-05",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": null,
+          "availableAttachments": ["scope_red_dot"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": ["laser_basic"],
+          "selected": true
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": ["grip_vertical"],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": ["magazine_extended"],
+          "selected": true
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": null,
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": null
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "sniper_01": {
+      "weaponId": "sniper_01",
+      "weaponName": "Снайперская винтовка SN-01",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": "scope_acog",
+          "availableAttachments": ["scope_acog"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": "bipod_basic",
+          "availableAttachments": ["bipod_basic"],
+          "selected": true
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": "scope_acog",
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": "bipod_basic"
+          }
+        },
+        "stealth_sniper": {
+          "name": "Скрытный снайпер",
+          "attachments": {
+            "scope": "scope_acog",
+            "muzzle": "muzzle_silencer",
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": "bipod_basic"
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "sniper_02": {
+      "weaponId": "sniper_02",
+      "weaponName": "Снайперская винтовка SN-02",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": "scope_acog",
+          "availableAttachments": ["scope_acog"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": "bipod_basic",
+          "availableAttachments": ["bipod_basic"],
+          "selected": true
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": "scope_acog",
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": "bipod_basic"
+          }
+        }
+      },
+      "activePreset": "default"
+    },
+    "sniper_03": {
+      "weaponId": "sniper_03",
+      "weaponName": "Снайперская винтовка SN-03",
+      "attachments": {
+        "scope": {
+          "slotType": "Scope",
+          "currentAttachment": "scope_acog",
+          "availableAttachments": ["scope_acog"],
+          "selected": true
+        },
+        "muzzle": {
+          "slotType": "Muzzle",
+          "currentAttachment": null,
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
+          "selected": true
+        },
+        "laser": {
+          "slotType": "Laser",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "grip": {
+          "slotType": "Grip",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "magazine": {
+          "slotType": "Magazine",
+          "currentAttachment": null,
+          "availableAttachments": [],
+          "selected": false
+        },
+        "bipod": {
+          "slotType": "Bipod",
+          "currentAttachment": "bipod_basic",
+          "availableAttachments": ["bipod_basic"],
+          "selected": true
+        }
+      },
+      "presetConfigurations": {
+        "default": {
+          "name": "Базовая комплектация",
+          "attachments": {
+            "scope": "scope_acog",
+            "muzzle": null,
+            "laser": null,
+            "grip": null,
+            "magazine": null,
+            "bipod": "bipod_basic"
+          }
+        }
+      },
+      "activePreset": "default"
+    }
+  },
+  "globalWeaponSettings": {
+    "autoApplyPresets": true,
+    "saveAttachmentsOnWeaponChange": true,
+    "allowMixedAttachments": true,
+    "attachmentCompatibilityCheck": true
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "attachments": {
+    "scope_red_dot": {
+      "attachmentId": "scope_red_dot",
+      "attachmentName": "Красная точка",
+      "attachmentType": "Scope",
+      "cost": 500,
+      "description": "Компактный коллиматорный прицел",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Scope_RedDot.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/scope_red_dot.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.9,
+        "rangeMultiplier": 1.1
+      },
+      "compatibleWeapons": ["handgun_01", "handgun_02", "smg_01", "ar_01"]
+    },
+    "scope_acog": {
+      "attachmentId": "scope_acog",
+      "attachmentName": "ACOG 4x",
+      "attachmentType": "Scope",
+      "cost": 1500,
+      "description": "Оптический прицел с 4-кратным увеличением",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Scope_ACOG.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/scope_acog.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.7,
+        "rangeMultiplier": 1.5
+      },
+      "compatibleWeapons": ["ar_01", "ar_02", "ar_03", "sniper_01", "sniper_02"]
+    },
+    "muzzle_compensator": {
+      "attachmentId": "muzzle_compensator",
+      "attachmentName": "Компенсатор",
+      "attachmentType": "Muzzle",
+      "cost": 300,
+      "description": "Уменьшает отдачу при стрельбе",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Muzzle_Compensator.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/muzzle_compensator.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.95,
+        "rangeMultiplier": 1.0
+      },
+      "compatibleWeapons": ["handgun_01", "handgun_02", "smg_01", "smg_02", "ar_01", "ar_02"]
+    },
+    "muzzle_silencer": {
+      "attachmentId": "muzzle_silencer",
+      "attachmentName": "Глушитель",
+      "attachmentType": "Muzzle",
+      "cost": 800,
+      "description": "Уменьшает шум выстрела, но снижает урон",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Muzzle_Silencer.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/muzzle_silencer.png",
+      "modifiers": {
+        "damageMultiplier": 0.9,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.95,
+        "rangeMultiplier": 1.0
+      },
+      "compatibleWeapons": ["handgun_01", "handgun_02", "handgun_03", "handgun_04", "smg_01", "smg_02", "ar_01"]
+    },
+    "laser_basic": {
+      "attachmentId": "laser_basic",
+      "attachmentName": "Лазер",
+      "attachmentType": "Laser",
+      "cost": 400,
+      "description": "Улучшает точность при стрельбе с бедра",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Laser_Basic.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/laser_basic.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.85,
+        "rangeMultiplier": 1.0
+      },
+      "compatibleWeapons": ["handgun_01", "handgun_02", "handgun_03", "handgun_04", "smg_01", "smg_02", "ar_01", "ar_02"]
+    },
+    "grip_vertical": {
+      "attachmentId": "grip_vertical",
+      "attachmentName": "Вертикальная рукоятка",
+      "attachmentType": "Grip",
+      "cost": 600,
+      "description": "Уменьшает отдачу, ускоряет перезарядку",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Grip_Vertical.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/grip_vertical.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 0.9,
+        "accuracyMultiplier": 0.9,
+        "rangeMultiplier": 1.0
+      },
+      "compatibleWeapons": ["smg_01", "smg_02", "smg_03", "smg_04", "smg_05", "ar_01", "ar_02", "ar_03"]
+    },
+    "grip_angled": {
+      "attachmentId": "grip_angled",
+      "attachmentName": "Угловая рукоятка",
+      "attachmentType": "Grip",
+      "cost": 700,
+      "description": "Улучшает контроль отдачи",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Grip_Angled.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/grip_angled.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 0.95,
+        "accuracyMultiplier": 0.85,
+        "rangeMultiplier": 1.0
+      },
+      "compatibleWeapons": ["smg_01", "smg_02", "smg_03", "ar_01", "ar_02", "ar_03"]
+    },
+    "magazine_extended": {
+      "attachmentId": "magazine_extended",
+      "attachmentName": "Расширенный магазин",
+      "attachmentType": "Magazine",
+      "cost": 500,
+      "description": "Устанавливает 45 патронов",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Magazine_Extended.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/magazine_extended.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 45,
+        "reloadTimeMultiplier": 1.1,
+        "accuracyMultiplier": 1.0,
+        "rangeMultiplier": 1.0
+      },
+      "compatibleWeapons": ["handgun_01", "handgun_02", "handgun_03", "handgun_04", "smg_01", "smg_02", "smg_03", "ar_01", "ar_02"]
+    },
+    "magazine_drum": {
+      "attachmentId": "magazine_drum",
+      "attachmentName": "Барабанный магазин",
+      "attachmentType": "Magazine",
+      "cost": 1200,
+      "description": "Устанавливает 75 патронов",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Magazine_Drum.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/magazine_drum.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 75,
+        "reloadTimeMultiplier": 1.3,
+        "accuracyMultiplier": 1.0,
+        "rangeMultiplier": 1.0
+      },
+      "compatibleWeapons": ["smg_01", "smg_02", "smg_03", "ar_01", "ar_02", "ar_03"]
+    },
+    "bipod_basic": {
+      "attachmentId": "bipod_basic",
+      "attachmentName": "Сошки",
+      "attachmentType": "Bipod",
+      "cost": 800,
+      "description": "Улучшает точность при стрельбе из положения лёжа",
+      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Bipod_Basic.prefab",
+      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/bipod_basic.png",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 0.9,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.6,
+        "rangeMultiplier": 1.2
+      },
+      "compatibleWeapons": ["ar_01", "ar_02", "ar_03", "sniper_01", "sniper_02", "sniper_03"]
+    }
+  }
+}
