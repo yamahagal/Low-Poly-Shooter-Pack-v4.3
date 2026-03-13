@@ -127,6 +127,11 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         protected override void Awake()
         {
+            SetAttachments();
+        }
+
+        public void SetAttachments()
+        {
             //Randomize. This allows us to spice things up a little!
             if (scopeIndexRandom)
                 scopeIndex = Random.Range(scopeIndexFirst, scopeArray.Length);
@@ -164,7 +169,7 @@ namespace InfimaGames.LowPolyShooterPack
                 magazineIndex = Random.Range(0, magazineArray.Length);
             //Select Magazine!
             magazineBehaviour = magazineArray.SelectAndSetActive(magazineIndex);
-        }        
+        }
 
         #endregion
 

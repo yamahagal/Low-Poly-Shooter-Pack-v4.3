@@ -156,7 +156,6 @@ namespace InfimaGames.LowPolyShooterPack
             equippedIndex = index;
             //Update equipped.
             equipped = weapons[equippedIndex];
-            Debug.Log(weapons.Length);
             //Activate the newly-equipped weapon.
             equipped.gameObject.SetActive(true);
 

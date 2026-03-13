@@ -947,6 +947,51 @@ AudioReverbZone:
   m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0
+--- !u!1 &245641308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2795493999401270507, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &245641315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245641308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f163583464436334eaf83ed95152fd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availabilityConfigPath: Assets/Data/attachments_availability_config.json
+  weaponsConfigPath: Assets/Data/weapons_attachments_config.json
+  manualWeaponId: handgun_03
+  autoDetectWeapon: 1
+  autoLoadOnStart: 1
+  showDebugMessages: 1
+  scopeMappings:
+  - attachmentId: scope_red_dot
+    arrayIndex: 0
+  - attachmentId: scope_acog
+    arrayIndex: 1
+  muzzleMappings:
+  - attachmentId: muzzle_compensator
+    arrayIndex: 0
+  - attachmentId: muzzle_silencer
+    arrayIndex: 1
+  laserMappings:
+  - attachmentId: laser_basic
+    arrayIndex: 0
+  gripMappings:
+  - attachmentId: grip_vertical
+    arrayIndex: 0
+  - attachmentId: grip_angled
+    arrayIndex: 1
+  magazineMappings:
+  - attachmentId: magazine_extended
+    arrayIndex: 0
 --- !u!43 &266121558
 Mesh:
   m_ObjectHideFlags: 0
@@ -1112,6 +1157,51 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &269478868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 405169780257742712, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &269478875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269478868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f163583464436334eaf83ed95152fd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availabilityConfigPath: Assets/Data/attachments_availability_config.json
+  weaponsConfigPath: Assets/Data/weapons_attachments_config.json
+  manualWeaponId: handgun_04
+  autoDetectWeapon: 1
+  autoLoadOnStart: 1
+  showDebugMessages: 1
+  scopeMappings:
+  - attachmentId: scope_red_dot
+    arrayIndex: 0
+  - attachmentId: scope_acog
+    arrayIndex: 1
+  muzzleMappings:
+  - attachmentId: muzzle_compensator
+    arrayIndex: 0
+  - attachmentId: muzzle_silencer
+    arrayIndex: 1
+  laserMappings:
+  - attachmentId: laser_basic
+    arrayIndex: 0
+  gripMappings:
+  - attachmentId: grip_vertical
+    arrayIndex: 0
+  - attachmentId: grip_angled
+    arrayIndex: 1
+  magazineMappings:
+  - attachmentId: magazine_extended
+    arrayIndex: 0
 --- !u!1 &334228468
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,6 +4617,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1578770076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &996660895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2496723213727302341, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &996660902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996660895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f163583464436334eaf83ed95152fd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availabilityConfigPath: Assets/Data/attachments_availability_config.json
+  weaponsConfigPath: Assets/Data/weapons_attachments_config.json
+  manualWeaponId: ar_01
+  autoDetectWeapon: 1
+  autoLoadOnStart: 1
+  showDebugMessages: 1
+  scopeMappings:
+  - attachmentId: scope_red_dot
+    arrayIndex: 0
+  - attachmentId: scope_acog
+    arrayIndex: 1
+  muzzleMappings:
+  - attachmentId: muzzle_compensator
+    arrayIndex: 0
+  - attachmentId: muzzle_silencer
+    arrayIndex: 1
+  laserMappings:
+  - attachmentId: laser_basic
+    arrayIndex: 0
+  gripMappings:
+  - attachmentId: grip_vertical
+    arrayIndex: 0
+  - attachmentId: grip_angled
+    arrayIndex: 1
+  magazineMappings:
+  - attachmentId: magazine_extended
+    arrayIndex: 0
 --- !u!43 &1001973099
 Mesh:
   m_ObjectHideFlags: 0
@@ -7621,6 +7756,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: IgnoreMaterial
       objectReference: {fileID: 0}
+    - target: {fileID: 5011530150170135274, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: weaponRecoilData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5038455482562121658, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
       propertyPath: m_TagString
@@ -8286,6 +8426,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: IgnoreMaterial
       objectReference: {fileID: 0}
+    - target: {fileID: 6670293881287734116, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: weaponRecoilData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6702177748712590197, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
       propertyPath: m_TagString
@@ -8370,6 +8515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: IgnoreMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840276737673441861, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6964469454945843612, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
@@ -8626,6 +8776,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: IgnoreMaterial
       objectReference: {fileID: 0}
+    - target: {fileID: 7678961333422894383, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: weaponRecoilData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7741290106814095750, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
       propertyPath: m_TagString
@@ -8761,6 +8916,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: IgnoreMaterial
       objectReference: {fileID: 0}
+    - target: {fileID: 8113310418508224255, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: scopeArray.Array.data[4]
+      value: 
+      objectReference: {fileID: 1594672173}
     - target: {fileID: 8186200237404853320, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
       propertyPath: m_TagString
@@ -8950,6 +9110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: IgnoreMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741478182242596882, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: weaponRecoilData
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8755071998435891608, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
@@ -9164,6 +9329,34 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 800320509}
+    - targetCorrespondingSourceObject: {fileID: 2496723213727302341, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 996660902}
+    - targetCorrespondingSourceObject: {fileID: 4063940675811791369, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1674823599}
+    - targetCorrespondingSourceObject: {fileID: 7469638133471336777, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1201989339}
+    - targetCorrespondingSourceObject: {fileID: 91241565878795807, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1259889243}
+    - targetCorrespondingSourceObject: {fileID: 247301344113785831, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1645646535}
+    - targetCorrespondingSourceObject: {fileID: 2795493999401270507, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 245641315}
+    - targetCorrespondingSourceObject: {fileID: 405169780257742712, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269478875}
   m_SourcePrefab: {fileID: 100100000, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
 --- !u!1 &1117918439
 GameObject:
@@ -10418,6 +10611,51 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1201989332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469638133471336777, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1201989339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201989332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f163583464436334eaf83ed95152fd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availabilityConfigPath: Assets/Data/attachments_availability_config.json
+  weaponsConfigPath: Assets/Data/weapons_attachments_config.json
+  manualWeaponId: ar_03
+  autoDetectWeapon: 1
+  autoLoadOnStart: 1
+  showDebugMessages: 1
+  scopeMappings:
+  - attachmentId: scope_red_dot
+    arrayIndex: 0
+  - attachmentId: scope_acog
+    arrayIndex: 1
+  muzzleMappings:
+  - attachmentId: muzzle_compensator
+    arrayIndex: 0
+  - attachmentId: muzzle_silencer
+    arrayIndex: 1
+  laserMappings:
+  - attachmentId: laser_basic
+    arrayIndex: 0
+  gripMappings:
+  - attachmentId: grip_vertical
+    arrayIndex: 0
+  - attachmentId: grip_angled
+    arrayIndex: 1
+  magazineMappings:
+  - attachmentId: magazine_extended
+    arrayIndex: 0
 --- !u!43 &1240613291
 Mesh:
   m_ObjectHideFlags: 0
@@ -10583,6 +10821,51 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1259889236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 91241565878795807, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1259889243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259889236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f163583464436334eaf83ed95152fd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availabilityConfigPath: Assets/Data/attachments_availability_config.json
+  weaponsConfigPath: Assets/Data/weapons_attachments_config.json
+  manualWeaponId: handgun_01
+  autoDetectWeapon: 1
+  autoLoadOnStart: 1
+  showDebugMessages: 1
+  scopeMappings:
+  - attachmentId: scope_red_dot
+    arrayIndex: 0
+  - attachmentId: scope_acog
+    arrayIndex: 1
+  muzzleMappings:
+  - attachmentId: muzzle_compensator
+    arrayIndex: 0
+  - attachmentId: muzzle_silencer
+    arrayIndex: 1
+  laserMappings:
+  - attachmentId: laser_basic
+    arrayIndex: 0
+  gripMappings:
+  - attachmentId: grip_vertical
+    arrayIndex: 0
+  - attachmentId: grip_angled
+    arrayIndex: 1
+  magazineMappings:
+  - attachmentId: magazine_extended
+    arrayIndex: 0
 --- !u!1 &1281250459
 GameObject:
   m_ObjectHideFlags: 0
@@ -11802,6 +12085,18 @@ Transform:
   - {fileID: 1281250460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594672173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5847373528103753812, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262a90da45c94c348be144e6130ec77b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1595701238
 GameObject:
   m_ObjectHideFlags: 0
@@ -12653,6 +12948,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1645646528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 247301344113785831, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1645646535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645646528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f163583464436334eaf83ed95152fd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availabilityConfigPath: Assets/Data/attachments_availability_config.json
+  weaponsConfigPath: Assets/Data/weapons_attachments_config.json
+  manualWeaponId: handgun_02
+  autoDetectWeapon: 1
+  autoLoadOnStart: 1
+  showDebugMessages: 1
+  scopeMappings:
+  - attachmentId: scope_red_dot
+    arrayIndex: 0
+  - attachmentId: scope_acog
+    arrayIndex: 1
+  muzzleMappings:
+  - attachmentId: muzzle_compensator
+    arrayIndex: 0
+  - attachmentId: muzzle_silencer
+    arrayIndex: 1
+  laserMappings:
+  - attachmentId: laser_basic
+    arrayIndex: 0
+  gripMappings:
+  - attachmentId: grip_vertical
+    arrayIndex: 0
+  - attachmentId: grip_angled
+    arrayIndex: 1
+  magazineMappings:
+  - attachmentId: magazine_extended
+    arrayIndex: 0
 --- !u!1 &1659068646
 GameObject:
   m_ObjectHideFlags: 0
@@ -12870,6 +13210,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668383901}
   m_CullTransparentMesh: 1
+--- !u!1 &1674823592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4063940675811791369, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1075357102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1674823599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674823592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f163583464436334eaf83ed95152fd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availabilityConfigPath: Assets/Data/attachments_availability_config.json
+  weaponsConfigPath: Assets/Data/weapons_attachments_config.json
+  manualWeaponId: ar_02
+  autoDetectWeapon: 1
+  autoLoadOnStart: 1
+  showDebugMessages: 1
+  scopeMappings:
+  - attachmentId: scope_red_dot
+    arrayIndex: 0
+  - attachmentId: scope_acog
+    arrayIndex: 1
+  muzzleMappings:
+  - attachmentId: muzzle_compensator
+    arrayIndex: 0
+  - attachmentId: muzzle_silencer
+    arrayIndex: 1
+  laserMappings:
+  - attachmentId: laser_basic
+    arrayIndex: 0
+  gripMappings:
+  - attachmentId: grip_vertical
+    arrayIndex: 0
+  - attachmentId: grip_angled
+    arrayIndex: 1
+  magazineMappings:
+  - attachmentId: magazine_extended
+    arrayIndex: 0
 --- !u!43 &1685249160
 Mesh:
   m_ObjectHideFlags: 0

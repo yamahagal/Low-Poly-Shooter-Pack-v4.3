@@ -32,14 +32,6 @@ namespace InfimaGames.LowPolyShooterPack
         [SerializeField] 
         private bool automatic;
 
-        [Tooltip("This is a single or burst weapon firing mode.")]
-        [SerializeField]
-        private string shootMode;
-
-        [Tooltip("This is a single or burst weapon firing mode.")]
-        [SerializeField]
-        private bool canBurst;
-
         [Tooltip("This is the distance at which your enemies can hear you if you have a silencer.")]
         [SerializeField]
         private float silencerRadius;
@@ -238,16 +230,6 @@ namespace InfimaGames.LowPolyShooterPack
             characterBehaviour = gameModeService.GetPlayerCharacter();
             //Cache the world camera. We use this in line traces.
             playerCamera = characterBehaviour.GetCameraWorld().transform;
-
-            canBurst = automatic;
-            if (canBurst)
-            {
-                shootMode = "burst";
-            }
-            else
-            {
-                shootMode = "single";
-            }
         }
         protected override void Start()
         {
@@ -270,27 +252,6 @@ namespace InfimaGames.LowPolyShooterPack
 
             //Max Out Ammo.
             ammunitionCurrent = magazineBehaviour.GetAmmunitionTotal();
-        }
-
-        protected override void Update()
-        {
-            if (Input.GetButtonDown("N"))
-            {
-                if (canBurst)
-                {
-                    if (shootMode == "burst")
-                    {
-                        shootMode = "single";
-                        automatic = false;
-                    }
-                    else
-                    {
-                        shootMode = "burst";
-                        automatic = true;
-                    }
-                    Debug.Log(shootMode);
-                }
-            }
         }
 
         #endregion

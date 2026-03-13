@@ -60,13 +60,13 @@
     "ar_01": {
       "weaponId": "ar_01",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "ar_02": {
       "weaponId": "ar_02",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "ar_03": {
@@ -102,7 +102,7 @@
     "rl_01": {
       "weaponId": "rl_01",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "gl_01": {
