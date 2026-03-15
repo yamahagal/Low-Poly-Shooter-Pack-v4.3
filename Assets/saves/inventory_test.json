@@ -42,7 +42,7 @@
     "smg_03": {
       "weaponId": "smg_03",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "smg_04": {
@@ -84,7 +84,7 @@
     "sniper_01": {
       "weaponId": "sniper_01",
       "purchased": true,
-      "selected": false,
+      "selected": true,
       "addedTime": null
     },
     "sniper_02": {

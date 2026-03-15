@@ -13,8 +13,6 @@ namespace InfimaGames.LowPolyShooterPack
     public class AttachmentAvailability
     {
         public bool purchased;
-        public bool selected;
-        public string purchaseDate;
     }
 
     [Serializable]
@@ -46,7 +44,6 @@ namespace InfimaGames.LowPolyShooterPack
         public string slotType;
         public string currentAttachment;
         public List<string> availableAttachments;
-        public bool selected;
     }
 
     [Serializable]
@@ -266,40 +263,6 @@ namespace InfimaGames.LowPolyShooterPack
                 return false;
 
             return availabilityData.attachmentsAvailability[attachmentId].purchased;
-        }
-
-        /// <summary>
-        /// Получить статус выбора обвеса
-        /// </summary>
-        public bool IsAttachmentSelected(string attachmentId)
-        {
-            if (availabilityData == null || 
-                !availabilityData.attachmentsAvailability.ContainsKey(attachmentId))
-                return false;
-
-            return availabilityData.attachmentsAvailability[attachmentId].selected;
-        }
-
-        /// <summary>
-        /// Получить доступные обвесы для оружия
-        /// </summary>
-        public List<string> GetAvailableAttachmentsForWeapon(string weaponId, string slotType)
-        {
-            if (weaponsData == null || 
-                !weaponsData.weaponsAttachments.ContainsKey(weaponId))
-                return new List<string>();
-
-            var weaponConfig = weaponsData.weaponsAttachments[weaponId];
-            
-            foreach (var slot in weaponConfig.attachments)
-            {
-                if (slot.Value.slotType == slotType && slot.Value.selected)
-                {
-                    return slot.Value.availableAttachments;
-                }
-            }
-
-            return new List<string>();
         }
 
         /// <summary>

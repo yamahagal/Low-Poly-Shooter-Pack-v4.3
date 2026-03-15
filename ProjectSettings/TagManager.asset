@@ -24,6 +24,7 @@ TagManager:
   - EnemyLimbs
   - Canvas
   - IgnoreMaterial
+  - EnemyAI
   layers:
   - Default
   - TransparentFX

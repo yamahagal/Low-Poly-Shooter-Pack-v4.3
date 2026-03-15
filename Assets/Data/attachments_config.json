@@ -6,8 +6,6 @@
       "attachmentType": "Scope",
       "cost": 500,
       "description": "Компактный коллиматорный прицел",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Scope_RedDot.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/scope_red_dot.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -18,14 +16,28 @@
       },
       "compatibleWeapons": ["handgun_01", "handgun_02", "smg_01", "ar_01"]
     },
+    "scope_holographic": {
+      "attachmentId": "scope_holographic",
+      "attachmentName": "Голографический прицел",
+      "attachmentType": "Scope",
+      "cost": 700,
+      "description": "Голографический прицел с увеличением 1x",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.85,
+        "rangeMultiplier": 1.15
+      },
+      "compatibleWeapons": ["handgun_01", "handgun_02", "smg_01", "smg_02", "ar_01"]
+    },
     "scope_acog": {
       "attachmentId": "scope_acog",
       "attachmentName": "ACOG 4x",
       "attachmentType": "Scope",
       "cost": 1500,
       "description": "Оптический прицел с 4-кратным увеличением",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Scope_ACOG.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/scope_acog.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -36,14 +48,92 @@
       },
       "compatibleWeapons": ["ar_01", "ar_02", "ar_03", "sniper_01", "sniper_02"]
     },
+    "scope_elcan": {
+      "attachmentId": "scope_elcan",
+      "attachmentName": "Elcan 4x",
+      "attachmentType": "Scope",
+      "cost": 1800,
+      "description": "Тяжёлый оптический прицел с 4-кратным увеличением",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.65,
+        "rangeMultiplier": 1.55
+      },
+      "compatibleWeapons": ["ar_01", "ar_02", "ar_03", "sniper_01"]
+    },
+    "scope_pso": {
+      "attachmentId": "scope_pso",
+      "attachmentName": "ПСО 4x",
+      "attachmentType": "Scope",
+      "cost": 1200,
+      "description": "Советский оптический прицел с 4-кратным увеличением",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.72,
+        "rangeMultiplier": 1.45
+      },
+      "compatibleWeapons": ["ar_01", "ar_02", "sniper_02", "sniper_03"]
+    },
+    "scope_vortex": {
+      "attachmentId": "scope_vortex",
+      "attachmentName": "Vortex 6x",
+      "attachmentType": "Scope",
+      "cost": 2500,
+      "description": "Оптический прицел с 6-кратным увеличением",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.55,
+        "rangeMultiplier": 1.8
+      },
+      "compatibleWeapons": ["sniper_01", "sniper_02", "sniper_03"]
+    },
+    "scope_night": {
+      "attachmentId": "scope_night",
+      "attachmentName": "Ночной прицел",
+      "attachmentType": "Scope",
+      "cost": 3000,
+      "description": "Ночной оптический прицел с 4-кратным увеличением",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.75,
+        "rangeMultiplier": 1.5
+      },
+      "compatibleWeapons": ["sniper_01", "sniper_02", "ar_03"]
+    },
+    "scope_thermal": {
+      "attachmentId": "scope_thermal",
+      "attachmentName": "Тепловизор",
+      "attachmentType": "Scope",
+      "cost": 5000,
+      "description": "Тепловизионный прицел с обнаружением целей в темноте",
+      "modifiers": {
+        "damageMultiplier": 1.0,
+        "fireRateMultiplier": 1.0,
+        "magazineCapacitySet": 0,
+        "reloadTimeMultiplier": 1.0,
+        "accuracyMultiplier": 0.8,
+        "rangeMultiplier": 1.6
+      },
+      "compatibleWeapons": ["sniper_01", "sniper_02", "sniper_03", "ar_03"]
+    },
     "muzzle_compensator": {
       "attachmentId": "muzzle_compensator",
       "attachmentName": "Компенсатор",
       "attachmentType": "Muzzle",
       "cost": 300,
       "description": "Уменьшает отдачу при стрельбе",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Muzzle_Compensator.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/muzzle_compensator.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -60,8 +150,6 @@
       "attachmentType": "Muzzle",
       "cost": 800,
       "description": "Уменьшает шум выстрела, но снижает урон",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Muzzle_Silencer.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/muzzle_silencer.png",
       "modifiers": {
         "damageMultiplier": 0.9,
         "fireRateMultiplier": 1.0,
@@ -78,8 +166,6 @@
       "attachmentType": "Laser",
       "cost": 400,
       "description": "Улучшает точность при стрельбе с бедра",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Laser_Basic.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/laser_basic.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -96,8 +182,6 @@
       "attachmentType": "Grip",
       "cost": 600,
       "description": "Уменьшает отдачу, ускоряет перезарядку",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Grip_Vertical.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/grip_vertical.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -114,8 +198,6 @@
       "attachmentType": "Grip",
       "cost": 700,
       "description": "Улучшает контроль отдачи",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Grip_Angled.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/grip_angled.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -132,8 +214,6 @@
       "attachmentType": "Magazine",
       "cost": 500,
       "description": "Устанавливает 45 патронов",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Magazine_Extended.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/magazine_extended.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -150,8 +230,6 @@
       "attachmentType": "Magazine",
       "cost": 1200,
       "description": "Устанавливает 75 патронов",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Magazine_Drum.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/magazine_drum.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 1.0,
@@ -168,8 +246,6 @@
       "attachmentType": "Bipod",
       "cost": 800,
       "description": "Улучшает точность при стрельбе из положения лёжа",
-      "prefabPath": "Assets/Infima Games/Low Poly Shooter Pack/Prefabs/Attachments/Bipod_Basic.prefab",
-      "iconPath": "Assets/Infima Games/Low Poly Shooter Pack/UI/Icons/Attachments/bipod_basic.png",
       "modifiers": {
         "damageMultiplier": 1.0,
         "fireRateMultiplier": 0.9,

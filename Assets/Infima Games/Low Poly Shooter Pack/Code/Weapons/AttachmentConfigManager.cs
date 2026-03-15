@@ -15,6 +15,10 @@ namespace InfimaGames.LowPolyShooterPack
         #region FIELDS SERIALIZED
 
         [Header("Пути к JSON файлам")]
+        [Tooltip("Путь к файлу сопоставлений обвесов")]
+        [SerializeField]
+        private string mappingsConfigPath = "Assets/Data/attachment_mappings.json";
+
         [Tooltip("Путь к файлу доступности обвесов")]
         [SerializeField]
         private string availabilityConfigPath = "Assets/Data/attachments_availability_config.json";
@@ -40,33 +44,13 @@ namespace InfimaGames.LowPolyShooterPack
         [SerializeField]
         private bool showDebugMessages = true;
 
-        [Header("Сопоставление ID обвесов")]
-        [Tooltip("Сопоставление ID прицелов с индексами")]
-        [SerializeField]
-        private List<AttachmentIdMapping> scopeMappings = new List<AttachmentIdMapping>();
-
-        [Tooltip("Сопоставление ID дульных насадок с индексами")]
-        [SerializeField]
-        private List<AttachmentIdMapping> muzzleMappings = new List<AttachmentIdMapping>();
-
-        [Tooltip("Сопоставление ID лазеров с индексами")]
-        [SerializeField]
-        private List<AttachmentIdMapping> laserMappings = new List<AttachmentIdMapping>();
-
-        [Tooltip("Сопоставление ID рукояток с индексами")]
-        [SerializeField]
-        private List<AttachmentIdMapping> gripMappings = new List<AttachmentIdMapping>();
-
-        [Tooltip("Сопоставление ID магазинов с индексами")]
-        [SerializeField]
-        private List<AttachmentIdMapping> magazineMappings = new List<AttachmentIdMapping>();
-
         #endregion
 
         #region FIELDS
 
         private AttachmentsAvailabilityData availabilityData;
         private WeaponsAttachmentsData weaponsData;
+        private AttachmentMappingsData mappingsData;
 
         private WeaponAttachmentManager attachmentManager;
         private string currentWeaponId = "ar_01";
@@ -99,6 +83,10 @@ namespace InfimaGames.LowPolyShooterPack
             if (showDebugMessages)
                 Debug.Log($"[AttachmentConfigManager] Начало загрузки конфигураций. Текущее оружие: {currentWeaponId}");
 
+            // Сначала загружаем сопоставления
+            LoadMappingsConfig();
+            
+            // Затем загружаем остальные конфигурации
             LoadAvailabilityConfig();
             LoadWeaponsConfig();
             
@@ -327,6 +315,35 @@ namespace InfimaGames.LowPolyShooterPack
         }
 
         /// <summary>
+        /// Загрузить конфигурацию сопоставлений обвесов
+        /// </summary>
+        public void LoadMappingsConfig()
+        {
+            try
+            {
+                if (!System.IO.File.Exists(mappingsConfigPath))
+                {
+                    Debug.LogError($"[AttachmentConfigManager] Файл сопоставлений не найден: {mappingsConfigPath}");
+                    return;
+                }
+
+                string json = System.IO.File.ReadAllText(mappingsConfigPath);
+                mappingsData = JsonConvert.DeserializeObject<AttachmentMappingsData>(json);
+                
+                if (showDebugMessages)
+                {
+                    Debug.Log($"[AttachmentConfigManager] Сопоставления загружены успешно (версия: {mappingsData.version})");
+                    Debug.Log($"[AttachmentConfigManager] Типов обвесов в сопоставлениях: {mappingsData.mappings.Count}");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"[AttachmentConfigManager] Ошибка загрузки сопоставлений: {e.Message}");
+                Debug.LogError($"[AttachmentConfigManager] Stack trace: {e.StackTrace}");
+            }
+        }
+
+        /// <summary>
         /// Применить конфигурацию к оружию
         /// </summary>
         public void ApplyConfigToWeapon(string weaponId)
@@ -386,11 +403,12 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         public bool IsAttachmentSelected(string attachmentId)
         {
-            if (availabilityData == null || 
+            if (availabilityData == null ||
                 !availabilityData.attachmentsAvailability.ContainsKey(attachmentId))
                 return false;
-
-            return availabilityData.attachmentsAvailability[attachmentId].selected;
+ 
+            // Обвес считается выбранным, если он куплен
+            return availabilityData.attachmentsAvailability[attachmentId].purchased;
         }
 
         /// <summary>
@@ -398,20 +416,20 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         public List<string> GetAvailableAttachmentsForWeapon(string weaponId, string slotType)
         {
-            if (weaponsData == null || 
+            if (weaponsData == null ||
                 !weaponsData.weaponsAttachments.ContainsKey(weaponId))
                 return new List<string>();
-
+ 
             var weaponConfig = weaponsData.weaponsAttachments[weaponId];
-            
+ 
             foreach (var slot in weaponConfig.attachments)
             {
-                if (slot.Value.slotType == slotType && slot.Value.selected)
+                if (slot.Value.slotType == slotType)
                 {
                     return slot.Value.availableAttachments;
                 }
             }
-
+ 
             return new List<string>();
         }
 
@@ -482,92 +500,55 @@ namespace InfimaGames.LowPolyShooterPack
         }
 
         /// <summary>
-        /// Добавить сопоставление ID обвеса с индексом
-        /// </summary>
-        public void AddMapping(string slotType, string attachmentId, int index)
-        {
-            var mapping = new AttachmentIdMapping
-            {
-                attachmentId = attachmentId,
-                arrayIndex = index
-            };
-
-            switch (slotType.ToLower())
-            {
-                case "scope":
-                    if (!scopeMappings.Exists(m => m.attachmentId == attachmentId))
-                        scopeMappings.Add(mapping);
-                    break;
-                case "muzzle":
-                    if (!muzzleMappings.Exists(m => m.attachmentId == attachmentId))
-                        muzzleMappings.Add(mapping);
-                    break;
-                case "laser":
-                    if (!laserMappings.Exists(m => m.attachmentId == attachmentId))
-                        laserMappings.Add(mapping);
-                    break;
-                case "grip":
-                    if (!gripMappings.Exists(m => m.attachmentId == attachmentId))
-                        gripMappings.Add(mapping);
-                    break;
-                case "magazine":
-                    if (!magazineMappings.Exists(m => m.attachmentId == attachmentId))
-                        magazineMappings.Add(mapping);
-                    break;
-            }
-        }
-
-        /// <summary>
         /// Получить индекс обвеса по ID
         /// </summary>
         public int GetAttachmentIndex(string slotType, string attachmentId)
         {
-            List<AttachmentIdMapping> mappings = null;
-
-            switch (slotType.ToLower())
+            if (mappingsData == null)
             {
-                case "scope":
-                    mappings = scopeMappings;
-                    break;
-                case "muzzle":
-                    mappings = muzzleMappings;
-                    break;
-                case "laser":
-                    mappings = laserMappings;
-                    break;
-                case "grip":
-                    mappings = gripMappings;
-                    break;
-                case "magazine":
-                    mappings = magazineMappings;
-                    break;
+                Debug.LogError("[AttachmentConfigManager] Данные сопоставлений не загружены!");
+                return -1;
             }
 
-            if (mappings != null)
+            if (mappingsData.mappings == null)
+            {
+                Debug.LogError("[AttachmentConfigManager] Словарь сопоставлений (mappings) равен null!");
+                return -1;
+            }
+
+            // Приводим тип слота к нижнему регистру
+            string slotKey = slotType.ToLower();
+            
+            // Проверяем наличие типа слота в сопоставлениях
+            if (!mappingsData.mappings.ContainsKey(slotKey))
+            {
+                Debug.LogWarning($"[AttachmentConfigManager] Тип слота {slotKey} не найден в сопоставлениях");
+                Debug.LogWarning($"[AttachmentConfigManager] Доступные ключи в сопоставлениях: {string.Join(", ", mappingsData.mappings.Keys)}");
+                return -1;
+            }
+
+            var mappings = mappingsData.mappings[slotKey];
+            
+            if (showDebugMessages)
+            {
+                Debug.Log($"[AttachmentConfigManager] Поиск индекса для {slotKey}.{attachmentId}");
+                Debug.Log($"[AttachmentConfigManager] Доступные сопоставления: {mappings.Count}");
+                foreach (var m in mappings)
+                {
+                    Debug.Log($"[AttachmentConfigManager]   - {m.attachmentId} -> {m.arrayIndex}");
+                }
+            }
+
+            var mapping = mappings.Find(m => m.attachmentId == attachmentId);
+            if (mapping != null)
             {
                 if (showDebugMessages)
-                {
-                    Debug.Log($"[AttachmentConfigManager] Поиск индекса для {slotType}.{attachmentId}");
-                    Debug.Log($"[AttachmentConfigManager] Доступные сопоставления: {mappings.Count}");
-                    foreach (var m in mappings)
-                    {
-                        Debug.Log($"[AttachmentConfigManager]   - {m.attachmentId} -> {m.arrayIndex}");
-                    }
-                }
-
-                var mapping = mappings.Find(m => m.attachmentId == attachmentId);
-                if (mapping != null)
-                {
-                    if (showDebugMessages)
-                        Debug.Log($"[AttachmentConfigManager] Найден индекс: {mapping.arrayIndex}");
-                    return mapping.arrayIndex;
-                }
-                else
-                {
-                    Debug.LogWarning($"[AttachmentConfigManager] Сопоставление не найдено для {attachmentId}");
-                }
+                    Debug.Log($"[AttachmentConfigManager] Найден индекс: {mapping.arrayIndex}");
+                return mapping.arrayIndex;
             }
 
+            Debug.LogWarning($"[AttachmentConfigManager] Сопоставление не найдено для {attachmentId}");
+            Debug.LogWarning($"[AttachmentConfigManager] Ищем в слоте {slotKey}, обвес {attachmentId}");
             return -1;
         }
 
@@ -604,7 +585,6 @@ namespace InfimaGames.LowPolyShooterPack
                 if (showDebugMessages)
                 {
                     Debug.Log($"[AttachmentConfigManager] Текущий прицел из JSON: {currentScope}");
-                    Debug.Log($"[AttachmentConfigManager] Слот выбран: {scopeSlot.selected}");
                 }
                 
                 if (!string.IsNullOrEmpty(currentScope))
@@ -991,18 +971,5 @@ namespace InfimaGames.LowPolyShooterPack
         }
 
         #endregion
-    }
-
-    /// <summary>
-    /// Класс для сопоставления ID обвеса с индексом в массиве
-    /// </summary>
-    [Serializable]
-    public class AttachmentIdMapping
-    {
-        [Tooltip("ID обвеса из JSON")]
-        public string attachmentId;
-
-        [Tooltip("Индекс в массиве WeaponAttachmentManager")]
-        public int arrayIndex;
     }
 }

@@ -53,7 +53,7 @@ namespace InfimaGames.LowPolyShooterPack
     void Start() {
         agent = GetComponent<NavMeshAgent>();
         current_health = start_health;
-        HealthBar.fillAmount = (current_health / start_health);
+        HealthBar.fillAmount = current_health / start_health;
         ammoAmount = startAmmoAmount;
         points_list = points.GetComponentsInChildren<Transform>();
         
@@ -156,7 +156,7 @@ namespace InfimaGames.LowPolyShooterPack
 
     public void CheckHit(float damage, Vector3 force, Vector3 hitPosition) {
         current_health -= damage;
-        HealthBar.fillAmount = (current_health / start_health);
+        HealthBar.fillAmount = current_health / start_health;
         MoveToTarget();
         if (current_health <= 0 || isDead) {
             if (!isDead) {

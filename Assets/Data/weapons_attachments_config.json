@@ -6,39 +6,33 @@
       "attachments": {
         "scope": {
           "slotType": "Scope",
-          "currentAttachment": "scope_acog",
-          "availableAttachments": ["scope_red_dot", "scope_acog"],
-          "selected": true
+          "currentAttachment": "scope_holographic",
+          "availableAttachments": ["scope_red_dot", "scope_acog", "scope_holographic"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": "muzzle_silencer",
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical", "grip_angled"],
-          "selected": false
+          "availableAttachments": ["grip_vertical", "grip_angled"]
         },
         "magazine": {
           "slotType": "Magazine",
-          "currentAttachment": "magazine_extended",
-          "availableAttachments": ["magazine_extended", "magazine_drum"],
-          "selected": true
+          "currentAttachment": "magazine_standard",
+          "availableAttachments": ["magazine_standard", "magazine_extended", "magazine_drum"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": ["bipod_basic"],
-          "selected": false
+          "availableAttachments": ["bipod_basic"]
         }
       },
       "presetConfigurations": {
@@ -85,38 +79,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": "scope_acog",
-          "availableAttachments": ["scope_red_dot", "scope_acog"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot", "scope_acog"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": "muzzle_silencer",
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical", "grip_angled"],
-          "selected": false
+          "availableAttachments": ["grip_vertical", "grip_angled"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended", "magazine_drum"],
-          "selected": true
+          "availableAttachments": ["magazine_extended", "magazine_drum"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": ["bipod_basic"],
-          "selected": false
+          "availableAttachments": ["bipod_basic"]
         }
       },
       "presetConfigurations": {
@@ -152,38 +140,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": "scope_red_dot",
-          "availableAttachments": ["scope_red_dot", "scope_acog"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot", "scope_acog"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": "muzzle_compensator",
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical", "grip_angled"],
-          "selected": false
+          "availableAttachments": ["grip_vertical", "grip_angled"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended", "magazine_drum"],
-          "selected": true
+          "availableAttachments": ["magazine_extended", "magazine_drum"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": ["bipod_basic"],
-          "selected": false
+          "availableAttachments": ["bipod_basic"]
         }
       },
       "presetConfigurations": {
@@ -219,38 +201,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical"],
-          "selected": false
+          "availableAttachments": ["grip_vertical"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -275,38 +251,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": "laser_basic",
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -342,38 +312,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -398,38 +362,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -454,38 +412,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -510,38 +462,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_acog"],
-          "selected": true
+          "availableAttachments": ["scope_acog"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical"],
-          "selected": false
+          "availableAttachments": ["grip_vertical"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": ["bipod_basic"],
-          "selected": false
+          "availableAttachments": ["bipod_basic"]
         }
       },
       "presetConfigurations": {
@@ -566,38 +512,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical", "grip_angled"],
-          "selected": false
+          "availableAttachments": ["grip_vertical", "grip_angled"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -633,38 +573,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": "scope_red_dot",
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": "muzzle_compensator",
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": "laser_basic",
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical"],
-          "selected": false
+          "availableAttachments": ["grip_vertical"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -700,38 +634,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical"],
-          "selected": false
+          "availableAttachments": ["grip_vertical"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -756,38 +684,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical"],
-          "selected": false
+          "availableAttachments": ["grip_vertical"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -812,38 +734,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical"],
-          "selected": false
+          "availableAttachments": ["grip_vertical"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -868,38 +784,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": null,
-          "availableAttachments": ["scope_red_dot"],
-          "selected": true
+          "availableAttachments": ["scope_red_dot"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": ["laser_basic"],
-          "selected": true
+          "availableAttachments": ["laser_basic"]
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": ["grip_vertical"],
-          "selected": false
+          "availableAttachments": ["grip_vertical"]
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": ["magazine_extended"],
-          "selected": true
+          "availableAttachments": ["magazine_extended"]
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         }
       },
       "presetConfigurations": {
@@ -924,38 +834,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": "scope_acog",
-          "availableAttachments": ["scope_acog"],
-          "selected": true
+          "availableAttachments": ["scope_acog"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": "bipod_basic",
-          "availableAttachments": ["bipod_basic"],
-          "selected": true
+          "availableAttachments": ["bipod_basic"]
         }
       },
       "presetConfigurations": {
@@ -991,38 +895,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": "scope_acog",
-          "availableAttachments": ["scope_acog"],
-          "selected": true
+          "availableAttachments": ["scope_acog"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": "bipod_basic",
-          "availableAttachments": ["bipod_basic"],
-          "selected": true
+          "availableAttachments": ["bipod_basic"]
         }
       },
       "presetConfigurations": {
@@ -1047,38 +945,32 @@
         "scope": {
           "slotType": "Scope",
           "currentAttachment": "scope_acog",
-          "availableAttachments": ["scope_acog"],
-          "selected": true
+          "availableAttachments": ["scope_acog"]
         },
         "muzzle": {
           "slotType": "Muzzle",
           "currentAttachment": null,
-          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"],
-          "selected": true
+          "availableAttachments": ["muzzle_compensator", "muzzle_silencer"]
         },
         "laser": {
           "slotType": "Laser",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "grip": {
           "slotType": "Grip",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "magazine": {
           "slotType": "Magazine",
           "currentAttachment": null,
-          "availableAttachments": [],
-          "selected": false
+          "availableAttachments": []
         },
         "bipod": {
           "slotType": "Bipod",
           "currentAttachment": "bipod_basic",
-          "availableAttachments": ["bipod_basic"],
-          "selected": true
+          "availableAttachments": ["bipod_basic"]
         }
       },
       "presetConfigurations": {

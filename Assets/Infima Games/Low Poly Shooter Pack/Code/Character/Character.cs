@@ -402,7 +402,7 @@ namespace InfimaGames.LowPolyShooterPack
 			if (equippedWeapon != null)
 			{
 				//Interpolate the world camera's field of view based on whether we are aiming or not.
-				cameraWorld.fieldOfView = Mathf.Lerp(fieldOfView, fieldOfView * equippedWeapon.GetFieldOfViewMultiplierAim(), aimingAlpha) * runningFieldOfView;
+				cameraWorld.fieldOfView = Mathf.Lerp(fieldOfView, fieldOfView * equippedWeapon.GetFieldOfViewMultiplierAim(), aimingAlpha) * runningFieldOfView * breathHoldingMultiplier;
 				//Interpolate the depth camera's field of view based on whether we are aiming or not.
 				cameraDepth.fieldOfView = Mathf.Lerp(fieldOfViewWeapon, fieldOfViewWeapon * equippedWeapon.GetFieldOfViewMultiplierAimWeapon(), aimingAlpha) * breathHoldingMultiplier;
 			}
@@ -1055,6 +1055,16 @@ namespace InfimaGames.LowPolyShooterPack
 				case {phase: InputActionPhase.Started}:
 					//Hold.
 					holdingButtonFire = true;
+					if (equippedWeapon.IsAutomatic())
+					{
+							//Reset fired shots, so recoil/spread does not just stay at max when we've run out
+							//of ammo already!
+							shotsFired = 0;
+							
+							//Break.
+							break;
+					}
+
 					break;
 				//Performed.
 				case {phase: InputActionPhase.Performed}:

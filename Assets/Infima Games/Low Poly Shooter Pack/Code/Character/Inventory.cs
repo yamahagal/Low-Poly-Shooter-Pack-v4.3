@@ -125,8 +125,6 @@ namespace InfimaGames.LowPolyShooterPack
                         DestroyImmediate(weaponObj);
                     }
                 }
-                
-                Debug.Log($"Удалено {removedCount} невыбранных оружий из инвентаря. Осталось: {allWeapons.Length - removedCount}");
             }
             catch (Exception e)
             {

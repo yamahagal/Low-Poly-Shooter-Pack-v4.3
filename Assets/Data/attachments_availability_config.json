@@ -1,85 +1,52 @@
 {
   "attachmentsAvailability": {
     "scope_red_dot": {
-      "purchased": true,
-      "selected": true,
-      "purchaseDate": "2024-01-15T10:30:00Z"
+      "purchased": true
+    },
+    "scope_holographic": {
+      "purchased": false
     },
     "scope_acog": {
-      "purchased": false,
-      "selected": false,
-      "purchaseDate": null
+      "purchased": false
+    },
+    "scope_elcan": {
+      "purchased": false
+    },
+    "scope_pso": {
+      "purchased": false
+    },
+    "scope_vortex": {
+      "purchased": false
+    },
+    "scope_night": {
+      "purchased": false
+    },
+    "scope_thermal": {
+      "purchased": false
     },
     "muzzle_compensator": {
-      "purchased": true,
-      "selected": true,
-      "purchaseDate": "2024-01-10T14:20:00Z"
+      "purchased": true
     },
     "muzzle_silencer": {
-      "purchased": false,
-      "selected": false,
-      "purchaseDate": null
+      "purchased": false
     },
     "laser_basic": {
-      "purchased": true,
-      "selected": true,
-      "purchaseDate": "2024-01-12T09:15:00Z"
+      "purchased": true
     },
     "grip_vertical": {
-      "purchased": false,
-      "selected": false,
-      "purchaseDate": null
+      "purchased": false
     },
     "grip_angled": {
-      "purchased": false,
-      "selected": false,
-      "purchaseDate": null
+      "purchased": false
     },
     "magazine_extended": {
-      "purchased": true,
-      "selected": true,
-      "purchaseDate": "2024-01-08T16:45:00Z"
+      "purchased": true
     },
     "magazine_drum": {
-      "purchased": false,
-      "selected": false,
-      "purchaseDate": null
+      "purchased": false
     },
     "bipod_basic": {
-      "purchased": false,
-      "selected": false,
-      "purchaseDate": null
-    }
-  },
-  "globalSettings": {
-    "allAttachmentsPurchased": true,
-    "allowExperimentalAttachments": false,
-    "maxAttachmentsPerWeapon": 4,
-    "attachmentCategories": {
-      "Scope": {
-        "maxSlots": 1,
-        "selected": true
-      },
-      "Muzzle": {
-        "maxSlots": 1,
-        "selected": true
-      },
-      "Laser": {
-        "maxSlots": 1,
-        "selected": true
-      },
-      "Grip": {
-        "maxSlots": 1,
-        "selected": true
-      },
-      "Magazine": {
-        "maxSlots": 1,
-        "selected": true
-      },
-      "Bipod": {
-        "maxSlots": 1,
-        "selected": true
-      }
+      "purchased": false
     }
   }
 }

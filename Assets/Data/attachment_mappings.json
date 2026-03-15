@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "description": "Сопоставление ID обвесов с индексами в массивах WeaponAttachmentManager (глобальные сопоставления для всех оружий)",
+  "mappings": {
+    "scope": [
+      {
+        "attachmentId": "scope_red_dot",
+        "arrayIndex": 0,
+        "name": "Red Dot Sight"
+      },
+      {
+        "attachmentId": "scope_acog",
+        "arrayIndex": 1,
+        "name": "ACOG Scope"
+      },
+      {
+        "attachmentId": "scope_sniper",
+        "arrayIndex": 2,
+        "name": "Sniper Scope"
+      },
+      {
+        "attachmentId": "scope_holographic",
+        "arrayIndex": 3,
+        "name": "Holographic Sight"
+      }
+    ],
+    "muzzle": [
+      {
+        "attachmentId": "muzzle_compensator",
+        "arrayIndex": 0,
+        "name": "Compensator"
+      },
+      {
+        "attachmentId": "muzzle_silencer",
+        "arrayIndex": 1,
+        "name": "Silencer"
+      },
+      {
+        "attachmentId": "muzzle_flash_hider",
+        "arrayIndex": 2,
+        "name": "Flash Hider"
+      },
+      {
+        "attachmentId": "muzzle_brake",
+        "arrayIndex": 3,
+        "name": "Muzzle Brake"
+      }
+    ],
+    "laser": [
+      {
+        "attachmentId": "laser_basic",
+        "arrayIndex": 0,
+        "name": "Basic Laser"
+      },
+      {
+        "attachmentId": "laser_tactical",
+        "arrayIndex": 1,
+        "name": "Tactical Laser"
+      },
+      {
+        "attachmentId": "laser_peq",
+        "arrayIndex": 2,
+        "name": "PEQ Laser"
+      }
+    ],
+    "grip": [
+      {
+        "attachmentId": "grip_vertical",
+        "arrayIndex": 0,
+        "name": "Vertical Grip"
+      },
+      {
+        "attachmentId": "grip_angled",
+        "arrayIndex": 1,
+        "name": "Angled Grip"
+      },
+      {
+        "attachmentId": "grip_bipod",
+        "arrayIndex": 2,
+        "name": "Bipod Grip"
+      }
+    ],
+    "magazine": [
+      {
+        "attachmentId": "magazine_standard",
+        "arrayIndex": 0,
+        "name": "Standard Magazine"
+      },
+      {
+        "attachmentId": "magazine_extended",
+        "arrayIndex": 1,
+        "name": "Extended Magazine"
+      },
+      {
+        "attachmentId": "magazine_drum",
+        "arrayIndex": 2,
+        "name": "Drum Magazine"
+      }
+    ]
+  }
+}

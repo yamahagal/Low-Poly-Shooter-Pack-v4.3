@@ -1,0 +1,13 @@
+﻿<Solution>
+  <Project Path="InfimaGames.LowPolyShooterPack.csproj" />
+  <Project Path="Toolbox.Editor.csproj" />
+  <Project Path="Toolbox.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="BzKovSoft.RagdollHelper.Editor.csproj" />
+  <Project Path="WeaponShop.csproj" />
+  <Project Path="Scripts.csproj" />
+  <Project Path="Toolbox.Editor.Tests.csproj" />
+  <Project Path="InfimaGames.Tools.csproj" />
+  <Project Path="Toolbox.Tests.csproj" />
+</Solution>

@@ -33,7 +33,8 @@ namespace InfimaGames.LowPolyShooterPack
             RaycastHit hit;
             Debug.DrawRay(camera.transform.position, camera.forward, Color.red);
             if (Physics.Raycast(camera.transform.position, camera.forward, out hit)) {
-                distanceText.text = $"Distance: {hit.distance} m";
+                if (distanceText != null)
+                    distanceText.text = $"Distance: {hit.distance} m";
             }
         }
 

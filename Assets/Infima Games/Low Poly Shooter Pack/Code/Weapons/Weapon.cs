@@ -149,6 +149,10 @@ namespace InfimaGames.LowPolyShooterPack
         [Tooltip("AudioClip played when this weapon is fired without any ammunition.")]
         [SerializeField]
         private AudioClip audioClipFireEmpty;
+
+        [Tooltip("Player Transform. Need to Emerald AI")]
+        [SerializeField]
+        private Transform playerTransform;
         
         [Tooltip("")]
         [SerializeField]
@@ -489,6 +493,7 @@ namespace InfimaGames.LowPolyShooterPack
                 projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * projectileImpulse;
                 if (damage != 0)
                 {
+                    projectile.GetComponent<Projectile>().PlayerTransform = playerTransform;
                     projectile.GetComponent<Projectile>().SetDamage(damage);
                 }
                 

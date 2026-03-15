@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections;
 using InfimaGames.LowPolyShooterPack;
 using Random = UnityEngine.Random;
+using System.Reflection;
 
 namespace InfimaGames.LowPolyShooterPack.Legacy
 {
@@ -29,6 +30,7 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
         [Header("Impact Effect Prefabs")]
 		public Transform[] bloodImpactPrefabs;
 
+		public Transform PlayerTransform;
 		public Transform[] metalImpactPrefabs;
 		public Transform[] dirtImpactPrefabs;
 		public Transform[] concreteImpactPrefabs;
@@ -131,7 +133,46 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 				//Destroy bullet object
 				Destroy(gameObject);
 			}
+			Debug.Log(collision.transform.tag);
+			if (collision.transform.tag == "EnemyAI") {
+				Debug.Log("Do hit!");
+				// Используем рефлексию для получения компонента LocationBasedDamageArea
+				System.Type locationBasedDamageAreaType = System.Type.GetType("LocationBasedDamageArea");
+				
+				// Если тип не найден напрямую, пробуем найти в сборках
+				if (locationBasedDamageAreaType == null)
+				{
+					foreach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies())
+					{
+						locationBasedDamageAreaType = assembly.GetType("LocationBasedDamageArea");
+						if (locationBasedDamageAreaType != null)
+							break;
+					}
+				}
+				
+				if (locationBasedDamageAreaType != null)
+				{
+					Debug.Log("Find!");
+					// Получаем компонент через рефлексию
+					Component locationBasedDamageArea = collision.collider.GetComponent(locationBasedDamageAreaType);
+					
+					if (locationBasedDamageArea != null)
+					{
+						// Получаем метод DamageArea через рефлексию
+						MethodInfo damageAreaMethod = locationBasedDamageAreaType.GetMethod("DamageArea");
+						if (damageAreaMethod != null)
+						{
+							// Вызываем метод через рефлексию
+							damageAreaMethod.Invoke(locationBasedDamageArea, new object[] { damage, PlayerTransform, 400 });
+						}
+					}
+				}
 
+			    //Destroy bullet object
+			    Destroy(gameObject);
+			}
+
+			//  ---------------Не используется так как используется Emerald AI
             /*if (collision.transform.tag == "Enemy")
             {
 				//Toggle "isHit" on target object
@@ -140,24 +181,22 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
                 //Destroy bullet object
                 Destroy(gameObject);
             }*/
-            if (collision.transform.tag == "EnemyHead")
+            /*if (collision.transform.tag == "EnemyHead")
             {
                 //Toggle "isHit" on target object
                 collision.transform.GetComponentInParent<EnemyNavigation>().CheckHit(damage*1.5f, GetComponent<Rigidbody>().velocity - transform.forward, transform.position);
                 //Destroy bullet object
-                Instantiate(bloodImpactPrefabs[Random.Range
-                        (0, bloodImpactPrefabs.Length)], transform.position,
-                    Quaternion.LookRotation(collision.contacts[0].normal));
+                Instantiate(bloodImpactPrefabs[Random.Range(0, bloodImpactPrefabs.Length)], transform.position,
+                Quaternion.LookRotation(collision.contacts[0].normal));
                 Destroy(gameObject);
             }
             if (collision.transform.tag == "EnemyBody")
             {
-    //Toggle "isHit" on target object
-    collision.transform.GetComponentInParent<EnemyNavigation>().CheckHit(damage, GetComponent<Rigidbody>().velocity - transform.forward, transform.position);     //collision.transform.gameObject.GetComponent<EnemyScript>().CheckHit(damage);
+    			//Toggle "isHit" on target object
+    			collision.transform.GetComponentInParent<EnemyNavigation>().CheckHit(damage, GetComponent<Rigidbody>().velocity - transform.forward, transform.position);     //collision.transform.gameObject.GetComponent<EnemyScript>().CheckHit(damage);
                 //Destroy bullet object
-                Instantiate(bloodImpactPrefabs[Random.Range
-                        (0, bloodImpactPrefabs.Length)], transform.position,
-                    Quaternion.LookRotation(collision.contacts[0].normal));
+                Instantiate(bloodImpactPrefabs[Random.Range(0, bloodImpactPrefabs.Length)], transform.position,
+                Quaternion.LookRotation(collision.contacts[0].normal));
                 Destroy(gameObject);
             }
             if (collision.transform.tag == "EnemyLimbs")
@@ -165,11 +204,10 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
                 //Toggle "isHit" on target object
                 collision.transform.GetComponentInParent<EnemyNavigation>().CheckHit(damage*0.75f, GetComponent<Rigidbody>().velocity - transform.forward, transform.position);   //collision.transform.gameObject.GetComponent<EnemyScript>().CheckHit(damage);
                 //Destroy bullet object
-                Instantiate(bloodImpactPrefabs[Random.Range
-                        (0, bloodImpactPrefabs.Length)], transform.position,
-                    Quaternion.LookRotation(collision.contacts[0].normal));
+                Instantiate(bloodImpactPrefabs[Random.Range(0, bloodImpactPrefabs.Length)], transform.position,
+                Quaternion.LookRotation(collision.contacts[0].normal));
                 Destroy(gameObject);
-            }
+            }*/
 
             //If bullet collides with "ExplosiveBarrel" tag
             if (collision.transform.tag == "ExplosiveBarrel")
