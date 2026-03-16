@@ -135,16 +135,15 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 			}
 			Debug.Log(collision.transform.tag);
 			if (collision.transform.tag == "EnemyAI") {
-				Debug.Log("Do hit!");
 				// Используем рефлексию для получения компонента LocationBasedDamageArea
-				System.Type locationBasedDamageAreaType = System.Type.GetType("LocationBasedDamageArea");
+				System.Type locationBasedDamageAreaType = System.Type.GetType("EmeraldAI.LocationBasedDamageArea");
 				
 				// Если тип не найден напрямую, пробуем найти в сборках
 				if (locationBasedDamageAreaType == null)
 				{
 					foreach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies())
 					{
-						locationBasedDamageAreaType = assembly.GetType("LocationBasedDamageArea");
+						locationBasedDamageAreaType = assembly.GetType("EmeraldAI.LocationBasedDamageArea");
 						if (locationBasedDamageAreaType != null)
 							break;
 					}
@@ -152,9 +151,8 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 				
 				if (locationBasedDamageAreaType != null)
 				{
-					Debug.Log("Find!");
 					// Получаем компонент через рефлексию
-					Component locationBasedDamageArea = collision.collider.GetComponent(locationBasedDamageAreaType);
+					Component locationBasedDamageArea = collision.gameObject.GetComponent(locationBasedDamageAreaType);
 					
 					if (locationBasedDamageArea != null)
 					{
@@ -163,7 +161,7 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 						if (damageAreaMethod != null)
 						{
 							// Вызываем метод через рефлексию
-							damageAreaMethod.Invoke(locationBasedDamageArea, new object[] { damage, PlayerTransform, 400 });
+							damageAreaMethod.Invoke(locationBasedDamageArea, new object[] { (int)damage, PlayerTransform, 400, false });
 						}
 					}
 				}

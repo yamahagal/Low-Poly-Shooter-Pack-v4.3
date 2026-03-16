@@ -1098,6 +1098,13 @@ namespace InfimaGames.LowPolyShooterPack
 				case {phase: InputActionPhase.Canceled}:
 					//Stop Hold.
 					holdingButtonFire = false;
+
+					if (equippedWeapon.IsAutomatic())
+					{
+						//Reset fired shots, so recoil/spread does not just stay at max when we've run out
+						//of ammo already!
+						shotsFired = 0;
+					}
 					break;
 			}
 		}

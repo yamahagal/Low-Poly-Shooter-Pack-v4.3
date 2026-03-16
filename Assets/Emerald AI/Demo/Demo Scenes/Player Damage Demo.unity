@@ -796,7 +796,6 @@ GameObject:
   - component: {fileID: 39926932}
   - component: {fileID: 39926931}
   - component: {fileID: 39926930}
-  - component: {fileID: 39926929}
   - component: {fileID: 39926927}
   - component: {fileID: 39926926}
   - component: {fileID: 39926925}
@@ -804,13 +803,14 @@ GameObject:
   - component: {fileID: 39926923}
   - component: {fileID: 39926922}
   - component: {fileID: 39926941}
+  - component: {fileID: 39926942}
   m_Layer: 4
   m_Name: Example Shooter AI
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &39926922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,90 +1023,6 @@ NavMeshAgent:
   m_BaseOffset: -0.055
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &39926929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39926921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLineOfSight: []
-  LBDComponentsLayer: 5
-  DeadLBDComponentsLayer: 0
-  SetCollidersLayerAndTag: 1
-  LBDComponentsTag: Untagged
-  LBDSettingsFoldout: 0
-  HideSettingsFoldout: 0
-  ColliderList:
-  - ColliderObject: {fileID: 1944252674}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 2142657785}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 2060622816}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 246310591}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1665524761}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 15522584}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 349340781}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1134427639}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 133974441}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1337442702}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 2120453348}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1555060883}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1907217006}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 221319124}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1098575349}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 2053835643}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &39926930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,6 +1586,90 @@ MonoBehaviour:
   WaypointOrigin: 
   AINamePos: {x: 0, y: 2.25, z: 0}
   AILevelPos: {x: 1.5, y: 0, z: 0}
+--- !u!114 &39926942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39926921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreLineOfSight: []
+  LBDComponentsLayer: 0
+  DeadLBDComponentsLayer: 0
+  SetCollidersLayerAndTag: 1
+  LBDComponentsTag: EnemyAI
+  LBDSettingsFoldout: 1
+  HideSettingsFoldout: 0
+  ColliderList:
+  - ColliderObject: {fileID: 1944252674}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2142657785}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2060622816}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 246310591}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1665524761}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 15522584}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 349340781}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1134427639}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 133974441}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1337442702}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2120453348}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1555060883}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1907217006}
+    DamageMultiplier: 2
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 221319124}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1098575349}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2053835643}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &41696803
 GameObject:
   m_ObjectHideFlags: 0
@@ -7219,13 +7219,14 @@ GameObject:
   - component: {fileID: 381792526}
   - component: {fileID: 381792525}
   - component: {fileID: 381792524}
+  - component: {fileID: 381792541}
   m_Layer: 4
   m_Name: Example Health Bar AI (Firsts)
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &381792524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8014,6 +8015,90 @@ Transform:
   - {fileID: 1737404759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -362.56, z: 0}
+--- !u!114 &381792541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381792523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreLineOfSight: []
+  LBDComponentsLayer: 0
+  DeadLBDComponentsLayer: 0
+  SetCollidersLayerAndTag: 1
+  LBDComponentsTag: EnemyAI
+  LBDSettingsFoldout: 1
+  HideSettingsFoldout: 0
+  ColliderList:
+  - ColliderObject: {fileID: 657697985}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 296579157}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1001429364}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1433392753}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2012985743}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1356324058}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1479176803}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 205839003}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 776496316}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 952468649}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 633766646}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1395769267}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 737999228}
+    DamageMultiplier: 2
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 592611892}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 149787728}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 720864890}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &383337560
 GameObject:
   m_ObjectHideFlags: 0
@@ -8497,6 +8582,7 @@ GameObject:
   - component: {fileID: 414051408}
   - component: {fileID: 414051407}
   - component: {fileID: 414051425}
+  - component: {fileID: 414051426}
   m_Layer: 4
   m_Name: Example Health Bar AI (Sword)
   m_TagString: Respawn
@@ -9372,6 +9458,90 @@ MonoBehaviour:
   WaypointOrigin: 
   AINamePos: {x: 0, y: 2.25, z: 0}
   AILevelPos: {x: 1.5, y: 0, z: 0}
+--- !u!114 &414051426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414051406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreLineOfSight: []
+  LBDComponentsLayer: 0
+  DeadLBDComponentsLayer: 0
+  SetCollidersLayerAndTag: 1
+  LBDComponentsTag: EnemyAI
+  LBDSettingsFoldout: 1
+  HideSettingsFoldout: 0
+  ColliderList:
+  - ColliderObject: {fileID: 2095117288}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1680368887}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1361514823}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 525398023}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 324324820}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2095467491}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 725597815}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1540779080}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1777190000}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 498198235}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 605062099}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 73978390}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1077063020}
+    DamageMultiplier: 2
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 97753739}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1384851230}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1920976123}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &423203842
 GameObject:
   m_ObjectHideFlags: 0
@@ -11146,7 +11316,7 @@ PrefabInstance:
     - target: {fileID: 7331196841171871207, guid: f5957fbe7d2648045a8fe3d65e490e2f,
         type: 3}
       propertyPath: showDebugMessages
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7475607333470711753, guid: f5957fbe7d2648045a8fe3d65e490e2f,
         type: 3}
@@ -21778,7 +21948,6 @@ GameObject:
   - component: {fileID: 1223765698}
   - component: {fileID: 1223765697}
   - component: {fileID: 1223765708}
-  - component: {fileID: 1223765710}
   - component: {fileID: 1223765696}
   - component: {fileID: 1223765695}
   - component: {fileID: 1223765694}
@@ -21786,13 +21955,14 @@ GameObject:
   - component: {fileID: 1223765692}
   - component: {fileID: 1223765707}
   - component: {fileID: 1223765711}
+  - component: {fileID: 1223765712}
   m_Layer: 4
   m_Name: Example Shooter AI
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1223765692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22505,90 +22675,6 @@ MonoBehaviour:
   HideSettingsFoldout: 0
   GeneralIKSettingsFoldout: 0
   RigSettingsFoldout: 0
---- !u!114 &1223765710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223765691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLineOfSight: []
-  LBDComponentsLayer: 5
-  DeadLBDComponentsLayer: 0
-  SetCollidersLayerAndTag: 1
-  LBDComponentsTag: Untagged
-  LBDSettingsFoldout: 0
-  HideSettingsFoldout: 0
-  ColliderList:
-  - ColliderObject: {fileID: 563028118}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1414968034}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1665702782}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1888816415}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 266397180}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 665295810}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1306544874}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1360131437}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 335058066}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1805021520}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 2036513561}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1586195216}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 677837107}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1087102021}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1427999133}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1587096964}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1223765711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22652,6 +22738,90 @@ MonoBehaviour:
   WaypointOrigin: 
   AINamePos: {x: 0, y: 2.25, z: 0}
   AILevelPos: {x: 1.5, y: 0, z: 0}
+--- !u!114 &1223765712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223765691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreLineOfSight: []
+  LBDComponentsLayer: 0
+  DeadLBDComponentsLayer: 0
+  SetCollidersLayerAndTag: 1
+  LBDComponentsTag: EnemyAI
+  LBDSettingsFoldout: 1
+  HideSettingsFoldout: 0
+  ColliderList:
+  - ColliderObject: {fileID: 563028118}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1414968034}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1665702782}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1888816415}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 266397180}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 665295810}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1306544874}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1360131437}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 335058066}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1805021520}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2036513561}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1586195216}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 677837107}
+    DamageMultiplier: 2
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1087102021}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1427999133}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1587096964}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1225453541
 GameObject:
   m_ObjectHideFlags: 0
@@ -29790,7 +29960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37b1db7cc7c630488b168e4a6f9888a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingHealth: 50
+  StartingHealth: 200
   Immortal: 0
   OnTakeDamage:
     m_PersistentCalls:
@@ -29825,7 +29995,7 @@ MonoBehaviour:
   DebugLogDeath: 1
   HideSettingsFoldout: 0
   HealthSettingsFoldout: 1
-  <Health>k__BackingField: 50
+  <Health>k__BackingField: 200
   <ActiveEffects>k__BackingField: []
 --- !u!114 &1726440567
 MonoBehaviour:
@@ -31860,7 +32030,6 @@ GameObject:
   - component: {fileID: 1939643809}
   - component: {fileID: 1939643808}
   - component: {fileID: 1939643807}
-  - component: {fileID: 1939643806}
   - component: {fileID: 1939643805}
   - component: {fileID: 1939643804}
   - component: {fileID: 1939643803}
@@ -31868,13 +32037,14 @@ GameObject:
   - component: {fileID: 1939643801}
   - component: {fileID: 1939643800}
   - component: {fileID: 1939643799}
+  - component: {fileID: 1939643818}
   m_Layer: 4
   m_Name: Example Shooter AI_1
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1939643799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32150,90 +32320,6 @@ NavMeshAgent:
   m_BaseOffset: -0.055
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1939643806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939643798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLineOfSight: []
-  LBDComponentsLayer: 5
-  DeadLBDComponentsLayer: 0
-  SetCollidersLayerAndTag: 1
-  LBDComponentsTag: Untagged
-  LBDSettingsFoldout: 0
-  HideSettingsFoldout: 0
-  ColliderList:
-  - ColliderObject: {fileID: 1221974823}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 464432980}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 2057393171}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 441177278}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 318661138}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1271228911}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1234614017}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 2081348863}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 707053097}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 270669702}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 1202602640}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 400725095}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 532009390}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 647451708}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 904669562}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
-  - ColliderObject: {fileID: 731450655}
-    DamageMultiplier: 1
-    BonePosition: {x: 0, y: 0, z: 0}
-    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1939643807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32734,6 +32820,90 @@ Transform:
   - {fileID: 545345534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1939643818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939643798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreLineOfSight: []
+  LBDComponentsLayer: 0
+  DeadLBDComponentsLayer: 0
+  SetCollidersLayerAndTag: 1
+  LBDComponentsTag: EnemyAI
+  LBDSettingsFoldout: 1
+  HideSettingsFoldout: 0
+  ColliderList:
+  - ColliderObject: {fileID: 1221974823}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 464432980}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2057393171}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 441177278}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 318661138}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1271228911}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1234614017}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 2081348863}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 707053097}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 270669702}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1202602640}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 400725095}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 532009390}
+    DamageMultiplier: 2
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 647451708}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 904669562}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 731450655}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1942570642
 GameObject:
   m_ObjectHideFlags: 0
@@ -35178,6 +35348,7 @@ GameObject:
   - component: {fileID: 2107663847}
   - component: {fileID: 2107663846}
   - component: {fileID: 2107663863}
+  - component: {fileID: 2107663864}
   m_Layer: 4
   m_Name: Example Ranged AI (Spell)
   m_TagString: Respawn
@@ -35950,6 +36121,90 @@ MonoBehaviour:
   WaypointOrigin: 
   AINamePos: {x: 0, y: 2.25, z: 0}
   AILevelPos: {x: 1.5, y: 0, z: 0}
+--- !u!114 &2107663864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107663845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreLineOfSight: []
+  LBDComponentsLayer: 0
+  DeadLBDComponentsLayer: 0
+  SetCollidersLayerAndTag: 1
+  LBDComponentsTag: EnemyAI
+  LBDSettingsFoldout: 1
+  HideSettingsFoldout: 0
+  ColliderList:
+  - ColliderObject: {fileID: 539368927}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1350834114}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 291980996}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1188332421}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1055910310}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 451518900}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 105207759}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 462102822}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 562724151}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 749236548}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 423203845}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 1005470956}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 483352847}
+    DamageMultiplier: 2
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 715329182}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 201684481}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
+  - ColliderObject: {fileID: 284008130}
+    DamageMultiplier: 1
+    BonePosition: {x: 0, y: 0, z: 0}
+    BoneRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2113600286
 GameObject:
   m_ObjectHideFlags: 0
